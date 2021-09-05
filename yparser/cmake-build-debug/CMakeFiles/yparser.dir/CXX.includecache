@@ -1,0 +1,114 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../easyio/easyio.h
+string
+-
+iostream
+-
+fstream
+-
+string
+-
+sstream
+-
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/globalheaders.h
+algorithm
+-
+iostream
+-
+string
+-
+vector
+-
+regex
+-
+map
+-
+openssl/sha.h
+-
+easyio.h
+-
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.h
+../globalheaders.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/globalheaders.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlRaw.cpp
+YmlRaw.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlRaw.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlRaw.h
+../globalheaders.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/globalheaders.h
+../interface/interface.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.h
+../util/util.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/util/util.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlList.cpp
+YmlList.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlList.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlList.h
+../../globalheaders.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/globalheaders.h
+../../interface/interface.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.h
+../YmlRaw.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlRaw.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlMap.cpp
+YmlMap.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlMap.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlMap.h
+../../globalheaders.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/globalheaders.h
+../../interface/interface.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.h
+../YmlRaw.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlRaw.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlScalar.cpp
+YmlScalar.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlScalar.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlScalar.h
+../../globalheaders.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/globalheaders.h
+../../interface/interface.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.h
+../YmlRaw.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlRaw.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/util/util.h
+../globalheaders.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/globalheaders.h
+
+D:/app/OpenSSL-Win64/include/openssl/e_os2.h
+openssl/opensslconf.h
+-
+inttypes.h
+-
+stdint.h
+-
+
+D:/app/OpenSSL-Win64/include/openssl/opensslconf.h
+openssl/opensslv.h
+-
+
+D:/app/OpenSSL-Win64/include/openssl/opensslv.h
+
+D:/app/OpenSSL-Win64/include/openssl/sha.h
+openssl/e_os2.h
+-
+stddef.h
+-
+

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Thaumy/Desktop/yparser proj/easyio/easyio.cpp
+easyio.h
+C:/Users/Thaumy/Desktop/yparser proj/easyio/easyio.h
+
+C:/Users/Thaumy/Desktop/yparser proj/easyio/easyio.h
+string
+-
+iostream
+-
+fstream
+-
+string
+-
+sstream
+-
+

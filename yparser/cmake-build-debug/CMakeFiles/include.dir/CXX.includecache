@@ -1,0 +1,62 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../easyio/easyio.h
+string
+-
+iostream
+-
+fstream
+-
+string
+-
+sstream
+-
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/globalheaders.h
+iostream
+-
+string
+-
+vector
+-
+regex
+-
+map
+-
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlNode.h
+../../globalheaders.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/globalheaders.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlList.h
+../YmlNode.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlNode.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlMap.h
+../YmlNode.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlNode.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlScalar.h
+../YmlNode.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlNode.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/yparser.cpp
+yparser.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/yparser.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/yparser.h
+type/derived/YmlMap.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlMap.h
+type/derived/YmlList.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlList.h
+type/derived/YmlScalar.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlScalar.h
+easyio.h
+-
+
