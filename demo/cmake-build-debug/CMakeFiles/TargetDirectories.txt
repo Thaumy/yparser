@@ -1,3 +1,3 @@
-C:/Users/Thaumy/Desktop/yparser proj/demo/cmake-build-debug/CMakeFiles/demo.dir
-C:/Users/Thaumy/Desktop/yparser proj/demo/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Thaumy/Desktop/yparser proj/demo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+H:/proj/cpp/yparser proj/demo/cmake-build-debug/CMakeFiles/demo.dir
+H:/proj/cpp/yparser proj/demo/cmake-build-debug/CMakeFiles/edit_cache.dir
+H:/proj/cpp/yparser proj/demo/cmake-build-debug/CMakeFiles/rebuild_cache.dir

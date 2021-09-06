@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Thaumy/Desktop/yparser proj/demo/main.cpp" "C:/Users/Thaumy/Desktop/yparser proj/demo/cmake-build-debug/CMakeFiles/demo.dir/main.cpp.obj"
+  "H:/proj/cpp/yparser proj/demo/main.cpp" "H:/proj/cpp/yparser proj/demo/cmake-build-debug/CMakeFiles/demo.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -13,6 +13,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../../yparser/include"
   "../../easyio"
   "D:/app/OpenSSL-Win64/include"
+  "C:/Boost/include/boost-1_77"
   )
 
 # Targets to which this target links.

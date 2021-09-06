@@ -24,5 +24,4 @@ namespace yparser {
     };
 }
 
-
 #endif //YPARSER_YMLMAP_H

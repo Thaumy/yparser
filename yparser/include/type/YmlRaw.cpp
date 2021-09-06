@@ -10,6 +10,8 @@
 #define Self yparser::YmlRaw
 
 
+using namespace boost;
+
 string Self::SHA256() const {
     return util::stringToSHA256(this->raw);
 }
@@ -39,8 +41,9 @@ Self::YmlRaw(string yml, const Type type) {//该构造不会使用格式化函�
 }
 
 vector<Self *> Self::parse(const bool &lazy) const {
-    auto results = regMS//此表达式不会匹配得到每个节点末的\n
-            (this->raw, R"((?:^|\n)(\w+:(?: .+|\n)(?:(?:  )+.+\n*)*)(?=\n|$))", 1);
+    //(?:^|\n)(\w+:(?: .+|\n)(?:(?:  )+.+\n*)*)(?=\n|$)
+    auto results = regMS//此表达式不应该匹配得到每个节点末的\n
+            (this->raw, R"(^\w+:[\n ](((  )+[^\n]+\n*)+(?=\n|$)|[^\n]+))");//perl syntax
 
     vector<Self *> arr;
 
@@ -79,7 +82,8 @@ bool Self::isText() const {
 //privates:
 
 bool Self::isMap(const string &yml) {
-    regex expr(R"(^\w+:\n(  )+\w+:)");
+    //^\w+:\n(  )+\w+:
+    regex expr(R"(^\w+:\n  \w)");//perl syntax
     return regex_search(yml, expr, mode);
 }
 
@@ -89,6 +93,7 @@ bool Self::isList(const string &yml) {
 }
 
 bool Self::isScalar(const string &yml) {
-    regex expr(R"(^\w+: .+)");
+    //^\w+: .+
+    regex expr(R"(^\w+: [^\n])");//perl syntax
     return regex_search(yml, expr, mode);
 }

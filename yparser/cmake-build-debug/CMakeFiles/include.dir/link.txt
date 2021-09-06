@@ -1,2 +1,0 @@
-D:\app\mingw64\bin\ar.exe qc libinclude.a  CMakeFiles/include.dir/include/yparser.cpp.obj CMakeFiles/include.dir/include/util/util.cpp.obj CMakeFiles/include.dir/include/type/YmlNode.cpp.obj CMakeFiles/include.dir/include/type/derived/YmlMap.cpp.obj CMakeFiles/include.dir/include/type/derived/YmlList.cpp.obj CMakeFiles/include.dir/include/type/derived/YmlScalar.cpp.obj
-D:\app\mingw64\bin\ranlib.exe libinclude.a

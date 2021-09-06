@@ -12,7 +12,8 @@
 
 Self::YmlMap(const string &yml) : YmlRaw(yml) {
     {//初始化key
-        auto result = regSS(yml, R"((?:^|\n)(\w+):(?: .+|\n)(?:(?:  )+.+\n*)*)", 1);
+        //regSS(yml, R"((?:^|\n)(\w+):(?: .+|\n)(?:(?:  )+.+\n*)*)", 1);
+        auto result = regSS(yml, R"(\w+(?=:\n  \w))");//perl syntax
         if (!result.empty())
             this->setKey(result);
         else//无法解析key时报错
@@ -20,7 +21,8 @@ Self::YmlMap(const string &yml) : YmlRaw(yml) {
                     ("error occurred when parsing this:\n" + yml);
     }
     {//初始化value
-        auto result = regSS(yml, R"((?:^|\n)\w+:(?: .+|\n)((?:(?:  )+.+\n*)*))", 1);
+        //(?:^|\n)\w+:(?: .+|\n)((?:(?:  )+.+\n*)*)
+        auto result = regSS(yml, R"(\w+:\n(.+))", 1);//perl syntax
         if (!result.empty()) {
             util::yml::decIndentation(result);//对结果减少缩进
             this->setValue(result);
@@ -29,10 +31,12 @@ Self::YmlMap(const string &yml) : YmlRaw(yml) {
                     ("error occurred when parsing this:\n" + yml);
     }
     {
-        auto keys = regMS(this->getValue(), R"((?:^|\n)(\w+):(?: .+|\n)(?:(?:  )+.+\n*)*)", 1);
-        auto raws = regMS(this->getValue(), R"((?:^|\n)\w+:(?: .+|\n)(?:(?:  )+.+\n*)*)");
+        //(?:^|\n)(\w+:(?: .+|\n)(?:(?:  )+.+\n*)*)(?=\n|$)
+        //(?:^|\n)(\w+):(?: .+|\n)(?:(?:  )+.+\n*)*(?=\n|$)
+        auto keys = regMS(this->getValue(), R"(^\w+)");//perl syntax
+        auto raws = regMS(this->getValue(), R"(^\w+:[\n ](((  )+[^\n]+\n*)+(?=\n)|[^\n]+))");//perl syntax
         if (keys.size() != raws.size() || keys.empty())
-            //无法解析value到std::map容器时
+            //无法解析value到std::map容器时报错
             throw map_value_parse_err
                     ("error occurred when parsing this into std::map:\n" + yml);
         else
@@ -45,7 +49,7 @@ Self::YmlMap(const string &yml) : YmlRaw(yml) {
     }
 }
 
-Self *Self::with(const YmlRaw *ymlRaw) {
+Self *Self::with(const YmlRaw *ymlRaw) {//TODO 记得改引用
     auto raw = ymlRaw->toString();
     if (ymlRaw->isMap())
         return new YmlMap(raw);

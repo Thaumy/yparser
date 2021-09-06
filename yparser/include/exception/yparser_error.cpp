@@ -13,4 +13,3 @@ Self::yparser_error(const string &message) {
 const char *Self::what() const _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_USE_NOEXCEPT {
     return this->message.c_str();
 }
-

@@ -7,6 +7,8 @@
 #define Self util
 
 
+using namespace boost;
+
 string Self::reg::singleSearch(const string &str, const string &expr, const int &position) {
     smatch sm;
     regex_search(str, sm, regex(expr));
@@ -49,6 +51,7 @@ void Self::yml::fixIndentation(string &yml) {
     //cout << "fixIndentation" << endl;
     auto mode = regex_constants::format_first_only;//只搜索第一个匹配项
     {//对奇数缩进增加一个空格
+        //\n (?:  )*(?=[^ ]+)
         regex expr(R"(\n (?:  )*(?=[^ ]+))");
         smatch sm;
         while (regex_search(yml, sm, expr)) {
@@ -56,8 +59,7 @@ void Self::yml::fixIndentation(string &yml) {
         }
     }
     {//修复单元素的错误缩进
-        //原表达式为：\n[^ ]+:\n(?:   +| )(?=(?:[^ :]+: |- )[^\n]+(?:\n[^ ]+|$))
-        //由于C++regex基于NFA，所以匹配单元素缩进超多的情况时效率很差。
+        //\n[^ \n]+\n(?:   +| )(?=[-\w][^\n]+\n?)
         regex expr(R"(\n[^ \n]+\n(?:   +| )(?=[-\w][^\n]+\n?))");
         smatch sm;
         while (regex_search(yml, sm, expr, mode)) {
@@ -71,19 +73,23 @@ void Self::yml::fixIndentation(string &yml) {
 
 void Self::yml::delAnnotation(string &yml) {
     //cout << "delAnnotation" << endl;
-    regex expr(R"( #.+)");
+    // #.+
+    regex expr(R"((^| )#[^\n]+)");//perl syntax
     yml = regex_replace(yml, expr, "");
 }
 
 void Self::yml::decIndentation(string &yml) {
-    regex expr(R"(  (?=\w|-))");
+    //cout << "decIndentation" << endl;
+    //  (?=\w|-)
+    regex expr(R"(^  )");//perl syntax
     yml = regex_replace(yml, expr, "");
 }
 
 void Self::yml::delBlankLine(string &yml) {
     //cout << "delBlankLine" << endl;
     {//去除最后一行之前的所有空行
-        regex expr(R"(\n( *\n*)*(?:\n))");
+        //\n( *\n*)*(?:\n)
+        regex expr(R"(^ *\n)");//perl syntax
         yml = regex_replace(yml, expr, "\n");
     }
     {//如果最后一行是空行，去除最后一行
@@ -94,6 +100,7 @@ void Self::yml::delBlankLine(string &yml) {
 
 void Self::yml::delLineEndSpace(string &yml) {
     //cout << "delLineEndSpace" << endl;
-    regex expr(R"( +(?=\n)| +$)");
+    // +(?=\n)| +$
+    regex expr(R"( *$)");//perl syntax
     yml = regex_replace(yml, expr, "");
 }

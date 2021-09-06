@@ -20,7 +20,8 @@ Self::YmlList(const string &yml) : YmlRaw(yml) {
                     ("error occurred when parsing this:\n" + yml);
     }
     {//初始化value
-        auto result = regSS(yml, R"((?:(?:  )+(?:- .+|\w+:.*|-)\n*)+(?=\n|$))");
+        auto result = regSS
+                (yml, R"((?:(?:  )+(?:- .+|\w+:.*|-)\n*)+(?=\n|$))");//perl syntax
         if (!result.empty()) {
             util::yml::decIndentation(result);
             this->setValue(result);
@@ -29,7 +30,9 @@ Self::YmlList(const string &yml) : YmlRaw(yml) {
                     ("error occurred when parsing this:\n" + yml);
     }
     {//初始化elements
-        auto result = regMS(this->getValue(), R"(-[ \n]((?:[^\n]+\n*)+?|[^\n]+)(?=-|$))", 1);
+        //(-[ \n]((?:[^\n]+\n*)+?|[^\n]+)(?=-|$))
+        auto result = regMS
+                (this->getValue(), R"(^- ?([^\n]+|\n(?:(?:  )+[^\n]+\n*)+(?=\n|$)))", 1);//perl syntax
         if (!result.empty()) {
             for (auto el:result) {
                 util::yml::decIndentation(el);

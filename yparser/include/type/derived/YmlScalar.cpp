@@ -12,7 +12,8 @@
 
 Self::YmlScalar(const string &yml) : YmlRaw(yml) {
     {//初始化key
-        auto result = regSS(yml, R"((\w+): .+)", 1);
+        //(\w+): .+
+        auto result = regSS(yml, R"(^\w+)");//perl syntax
         if (!result.empty())
             this->setKey(result);
         else//无法解析key时报错
@@ -20,7 +21,8 @@ Self::YmlScalar(const string &yml) : YmlRaw(yml) {
                     ("error occurred when parsing this:\n" + yml);
     }
     {//初始化value
-        auto result = regSS(yml, R"(\w+: (.+))", 1);
+        //\w+: (.+)
+        auto result = regSS(yml, R"(^\w+: (.+))", 1);//perl syntax
         if (!result.empty()) {
             util::yml::decIndentation(result);//对结果减少缩进
             this->setValue(result);

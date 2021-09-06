@@ -12,7 +12,7 @@ students:
     message: good
     nekos:
       cat1: jbcat
-      cat2: blackcat
+      cat2: ooo
 AwesomeSite:
   url: http://cdn.thaumy.cn/
 Goods:
@@ -24,5 +24,6 @@ Goods:
   -
     id1: 1
     id2: 2
+  - hybrid
 List:
   - 12384

@@ -1,16 +1,29 @@
-user1:
-  name: alice
-  car: 123
-  message: sss
-user12:
-  name: alice
-  car: 123
-  message: akjbgbasbga
-user121:
-  name: alice
-  car: 123
-  message: akjbgbasbga
-user1123:
-  name: alice
-  car: 123
-  message: akjbgbasbga
+hola: hello
+sekai: world
+students:
+  Joe:
+    phone: 1951327599
+    message: thaumy12384
+    favorNumbers:
+      - 114
+      - 514
+      - 000
+  Alice:
+    message: good
+    nekos:
+      cat1: jbcat
+      cat2: ooo
+AwesomeSite:
+  url: http://cdn.thaumy.cn/
+Goods:
+  -
+    fruits:
+      - apple
+      - banana
+      - cherry
+  -
+    id1: 1
+    id2: 2
+  - hybrid
+List:
+  - 12384

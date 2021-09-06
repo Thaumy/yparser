@@ -10,9 +10,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <regex>
+//#include <regex>
 #include <map>
 
+#include <boost/regex.hpp>
 #include <openssl/sha.h>
 #include <easyio.h>
 
