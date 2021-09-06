@@ -2,11 +2,11 @@
 // Created by Thaumy on 2021/9/1.
 //
 
-#ifndef YPARSER_YMLNODE_H
-#define YPARSER_YMLNODE_H
+#ifndef YPARSER_YMLRAW_H
+#define YPARSER_YMLRAW_H
 
 #include "../globalheaders.h"
-#include "../interface/interface.h"
+#include "../interface/interface.hpp"
 #include "../util/util.h"
 
 
@@ -64,4 +64,5 @@ namespace yparser {
     };
 
 }
-#endif //YPARSER_YMLNODE_H
+
+#endif //YPARSER_YMLRAW_H

@@ -4,8 +4,8 @@
 
 #include "YmlRaw.h"
 
-#define regSS util::regexSingleSearch
-#define regMS util::regexMultiSearch
+#define regSS util::reg::singleSearch
+#define regMS util::reg::multiSearch
 
 #define Self yparser::YmlRaw
 
@@ -21,7 +21,7 @@ string Self::toString() const {
 Self::YmlRaw(string yml) {//默认用户输入需要格式化，只有此构造才会调用格式化函数流水线
     this->type = text;//默认为文本类型
 
-    using namespace util;
+    using namespace util::yml;
     function<void(string &)> pipeline[] =//格式化函数流水线
             {delAnnotation,//删除注释
              delBlankLine,//清除空行

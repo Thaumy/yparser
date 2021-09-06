@@ -6,12 +6,12 @@
 #define YPARSER_YMLMAP_H
 
 #include "../../globalheaders.h"
-#include "../../interface/interface.h"
+#include "../../interface/interface.hpp"
 #include "../YmlRaw.h"
 
 
 namespace yparser {
-    class YmlMap : public YmlRaw, public IKeyValueTangible {
+    class YmlMap : public YmlRaw, public IKeyValueTangible<string, string> {
     public:
         explicit YmlMap(const string &);
 

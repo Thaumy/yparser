@@ -6,12 +6,13 @@
 #define YPARSER_YMLLIST_H
 
 #include "../../globalheaders.h"
-#include "../../interface/interface.h"
+#include "../../interface/interface.hpp"
+#include "../../exception/yparser_error.h"
 #include "../YmlRaw.h"
 
 
 namespace yparser {
-    class YmlList : public YmlRaw, public IKeyValueTangible {
+    class YmlList : public YmlRaw, public IKeyValueTangible<string, string> {
     public:
         explicit YmlList(const string &);
 

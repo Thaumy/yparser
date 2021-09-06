@@ -6,12 +6,12 @@
 #define YPARSER_YMLSCALAR_H
 
 #include "../../globalheaders.h"
-#include "../../interface/interface.h"
+#include "../../interface/interface.hpp"
 #include "../YmlRaw.h"
 
 
 namespace yparser {
-    class YmlScalar : public YmlRaw, public IKeyValueTangible {
+    class YmlScalar : public YmlRaw, public IKeyValueTangible<string, string> {
     public:
         explicit YmlScalar(const string &);
 
@@ -23,6 +23,5 @@ namespace yparser {
         //TODO
     };
 }
-
 
 #endif //YPARSER_YMLSCALAR_H

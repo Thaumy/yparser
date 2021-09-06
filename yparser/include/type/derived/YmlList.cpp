@@ -4,8 +4,8 @@
 
 #include "YmlList.h"
 
-#define regSS util::regexSingleSearch
-#define regMS util::regexMultiSearch
+#define regSS util::reg::singleSearch
+#define regMS util::reg::multiSearch
 
 #define Self yparser::YmlList
 
@@ -14,24 +14,30 @@ Self::YmlList(const string &yml) : YmlRaw(yml) {
     {//初始化key
         auto result = regSS(yml, R"((\w+):\n  -)", 1);
         if (!result.empty())
-            key = result;
-        else
-            throw "can't parse key";//无法解析key
+            this->setKey(result);
+        else//无法解析key时报错
+            throw list_key_parse_err
+                    ("error occurred when parsing this:\n" + yml);
     }
     {//初始化value
         auto result = regSS(yml, R"((?:(?:  )+(?:- .+|\w+:.*|-)\n*)+(?=\n|$))");
         if (!result.empty()) {
-            util::decIndentation(result);
-            value = result;
-        } else
-            throw "can't parse value";//无法解析value
+            util::yml::decIndentation(result);
+            this->setValue(result);
+        } else//无法解析value时报错
+            throw list_value_parse_err
+                    ("error occurred when parsing this:\n" + yml);
     }
     {//初始化elements
-        auto result = regMS(value, R"(-[ \n]((?:[^\n]+\n*)+?|[^\n]+)(?=-|$))", 1);
-        for (auto el:result) {
-            util::decIndentation(el);
-            elements.emplace_back(YmlRaw(el));
-        }
+        auto result = regMS(this->getValue(), R"(-[ \n]((?:[^\n]+\n*)+?|[^\n]+)(?=-|$))", 1);
+        if (!result.empty()) {
+            for (auto el:result) {
+                util::yml::decIndentation(el);
+                elements.emplace_back(YmlRaw(el));
+            }
+        } else//无法解析value到std::vector容器时
+            throw list_value_parse_err
+                    ("error occurred when parsing this into std::vector:\n" + yml);
     }
 }
 

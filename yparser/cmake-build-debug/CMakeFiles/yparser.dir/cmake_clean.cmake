@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/yparser.dir/include/interface/interface.cpp.obj"
+  "CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.obj"
   "CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj"
   "CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj"
   "CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj"

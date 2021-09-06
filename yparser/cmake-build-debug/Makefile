@@ -142,32 +142,32 @@ yparser/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\yparser.dir\build.make CMakeFiles/yparser.dir/build
 .PHONY : yparser/fast
 
-include/interface/interface.obj: include/interface/interface.cpp.obj
+include/exception/yparser_error.obj: include/exception/yparser_error.cpp.obj
 
-.PHONY : include/interface/interface.obj
+.PHONY : include/exception/yparser_error.obj
 
 # target to build an object file
-include/interface/interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yparser.dir\build.make CMakeFiles/yparser.dir/include/interface/interface.cpp.obj
-.PHONY : include/interface/interface.cpp.obj
+include/exception/yparser_error.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\yparser.dir\build.make CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.obj
+.PHONY : include/exception/yparser_error.cpp.obj
 
-include/interface/interface.i: include/interface/interface.cpp.i
+include/exception/yparser_error.i: include/exception/yparser_error.cpp.i
 
-.PHONY : include/interface/interface.i
+.PHONY : include/exception/yparser_error.i
 
 # target to preprocess a source file
-include/interface/interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yparser.dir\build.make CMakeFiles/yparser.dir/include/interface/interface.cpp.i
-.PHONY : include/interface/interface.cpp.i
+include/exception/yparser_error.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\yparser.dir\build.make CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.i
+.PHONY : include/exception/yparser_error.cpp.i
 
-include/interface/interface.s: include/interface/interface.cpp.s
+include/exception/yparser_error.s: include/exception/yparser_error.cpp.s
 
-.PHONY : include/interface/interface.s
+.PHONY : include/exception/yparser_error.s
 
 # target to generate assembly for a file
-include/interface/interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yparser.dir\build.make CMakeFiles/yparser.dir/include/interface/interface.cpp.s
-.PHONY : include/interface/interface.cpp.s
+include/exception/yparser_error.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\yparser.dir\build.make CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.s
+.PHONY : include/exception/yparser_error.cpp.s
 
 include/type/YmlRaw.obj: include/type/YmlRaw.cpp.obj
 
@@ -313,9 +313,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... yparser
-	@echo ... include/interface/interface.obj
-	@echo ... include/interface/interface.i
-	@echo ... include/interface/interface.s
+	@echo ... include/exception/yparser_error.obj
+	@echo ... include/exception/yparser_error.i
+	@echo ... include/exception/yparser_error.s
 	@echo ... include/type/YmlRaw.obj
 	@echo ... include/type/YmlRaw.i
 	@echo ... include/type/YmlRaw.s

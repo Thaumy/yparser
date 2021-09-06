@@ -29,10 +29,10 @@ void parseAll(const string& yml) {
                 auto it = YmlScalar::with(el);
                 cout << "SCALAR  : " << it->getKey() << endl;
                 parseAll(it->getValue());
-            }
+            };
         }
     } else {
-        cout << "TEXT:" << yml << endl;;
+        cout << "TEXT:" << yml << endl;
     }
 }
 

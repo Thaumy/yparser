@@ -4,8 +4,8 @@
 
 #include "YmlScalar.h"
 
-#define regSS util::regexSingleSearch
-#define regMS util::regexMultiSearch
+#define regSS util::reg::singleSearch
+#define regMS util::reg::multiSearch
 
 #define Self yparser::YmlScalar
 
@@ -14,17 +14,19 @@ Self::YmlScalar(const string &yml) : YmlRaw(yml) {
     {//初始化key
         auto result = regSS(yml, R"((\w+): .+)", 1);
         if (!result.empty())
-            key = result;
-        else
-            throw "can't parse key";//无法解析key
+            this->setKey(result);
+        else//无法解析key时报错
+            throw scalar_key_parse_err
+                    ("error occurred when parsing this:\n" + yml);
     }
     {//初始化value
         auto result = regSS(yml, R"(\w+: (.+))", 1);
         if (!result.empty()) {
-            util::decIndentation(result);//对结果减少缩进
-            value = result;
-        } else
-            throw "can't parse value";//无法解析value
+            util::yml::decIndentation(result);//对结果减少缩进
+            this->setValue(result);
+        } else//无法解析value时报错
+            throw scalar_value_parse_err
+                    ("error occurred when parsing this:\n" + yml);
     }
 }
 

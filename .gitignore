@@ -1,0 +1,49 @@
+# Compiled source #
+*.class
+*.com
+*.dll
+*.exe
+*.obj
+*.so
+*.o
+
+# Packages #
+*.dmg
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.7z
+*.gz
+
+# Logs and databases #
+*.log
+
+# OS generated files #
+.Spotlight-V100
+ehthumbs.db
+.DS_Store?
+.DS_Store
+Thumbs.db
+.Trashes
+._*
+
+# Node
+/dist_electron
+node_modules
+/dist
+
+# Editor directories and files
+.gradle
+.vscode
+.idea
+
+# vs
+bin
+obj
+.vs
+
+# local env files
+.env.*.local
+.env.local

@@ -3,14 +3,26 @@ project(include)
 
 set(CMAKE_CXX_STANDARD 14)
 
+set(root include)
 
-set(p1 include/yparser.h)
-set(p2 include/util/util.h include/util/util.cpp)
-set(p3 include/type/YmlRaw.h include/type/YmlRaw.cpp)
-set(p4 include/type/derived/YmlMap.h include/type/derived/YmlMap.cpp)
-set(p5 include/type/derived/YmlList.h include/type/derived/YmlList.cpp)
-set(p6 include/type/derived/YmlScalar.h include/type/derived/YmlScalar.cpp)
-set(ps ${p1} ${p2} ${p3} ${p4} ${p5} ${p6} include/interface/interface.cpp include/interface/interface.h include/globalheaders.h)
+set(f1 ${root}/yparser.h)
+set(f2 ${root}/globalheaders.h)
+set(f3 ${root}/util/util.h ${root}/util/util.cpp)
+set(f4 ${root}/interface/interface.hpp)
+set(f5 ${root}/type/YmlRaw.h ${root}/type/YmlRaw.cpp)
+set(f6 ${root}/type/derived/YmlMap.h ${root}/type/derived/YmlMap.cpp)
+set(f7 ${root}/type/derived/YmlList.h ${root}/type/derived/YmlList.cpp)
+set(f8 ${root}/type/derived/YmlScalar.h ${root}/type/derived/YmlScalar.cpp)
+set(functions ${f1} ${f2} ${f3} ${f4} ${f5} ${f6} ${f7} ${f8})
+
+set(ef ${root}/exception)
+set(e1 ${ef}/yparser_error.h ${ef}/yparser_error.cpp)
+set(e2 ${ef}/derived/list_key_parse_err.hpp ${ef}/derived/list_value_parse_err.hpp)
+set(e3 ${ef}/derived/map_key_parse_err.hpp ${ef}/derived/map_value_parse_err.hpp)
+set(e4 ${ef}/derived/scalar_key_parse_err.hpp ${ef}/derived/scalar_value_parse_err.hpp)
+set(exceptions ${e1} ${e2} ${e3} ${e4})
+
+set(coms ${functions} ${exceptions})
 
 include_directories(../easyio)
 link_directories(../easyio/cmake-build-debug)
@@ -20,5 +32,5 @@ link_directories(D:/app/OpenSSL-Win64/lib)
 link_libraries(easyio)
 link_libraries(openssl libcrypto libssl)
 
-add_library(yparser ${ps})
+add_library(yparser ${coms})
 

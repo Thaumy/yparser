@@ -17,5 +17,4 @@ namespace easyio {
     void write(const string &str, const string &tar);
 }
 
-
 #endif //EASYIO_EASYIO_H

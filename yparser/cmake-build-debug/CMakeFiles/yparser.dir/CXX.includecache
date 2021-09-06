@@ -18,8 +18,32 @@ string
 sstream
 -
 
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/list_key_parse_err.hpp
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/list_value_parse_err.hpp
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/map_key_parse_err.hpp
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/map_value_parse_err.hpp
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/scalar_key_parse_err.hpp
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/scalar_value_parse_err.hpp
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/yparser_error.cpp
+yparser_error.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/yparser_error.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/yparser_error.h
+exception
+-
+string
+-
+
 C:/Users/Thaumy/Desktop/yparser proj/yparser/include/globalheaders.h
 algorithm
+-
+exception
 -
 iostream
 -
@@ -35,8 +59,22 @@ openssl/sha.h
 -
 easyio.h
 -
+exception/yparser_error.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/yparser_error.h
+exception/derived/map_key_parse_err.hpp
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/map_key_parse_err.hpp
+exception/derived/map_value_parse_err.hpp
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/map_value_parse_err.hpp
+exception/derived/list_key_parse_err.hpp
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/list_key_parse_err.hpp
+exception/derived/list_value_parse_err.hpp
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/list_value_parse_err.hpp
+exception/derived/scalar_key_parse_err.hpp
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/scalar_key_parse_err.hpp
+exception/derived/scalar_value_parse_err.hpp
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/scalar_value_parse_err.hpp
 
-C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.hpp
 ../globalheaders.h
 C:/Users/Thaumy/Desktop/yparser proj/yparser/include/globalheaders.h
 
@@ -47,8 +85,8 @@ C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlRaw.h
 C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlRaw.h
 ../globalheaders.h
 C:/Users/Thaumy/Desktop/yparser proj/yparser/include/globalheaders.h
-../interface/interface.h
-C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.h
+../interface/interface.hpp
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.hpp
 ../util/util.h
 C:/Users/Thaumy/Desktop/yparser proj/yparser/include/util/util.h
 
@@ -59,8 +97,10 @@ C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlList.h
 C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlList.h
 ../../globalheaders.h
 C:/Users/Thaumy/Desktop/yparser proj/yparser/include/globalheaders.h
-../../interface/interface.h
-C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.h
+../../interface/interface.hpp
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.hpp
+../../exception/yparser_error.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/yparser_error.h
 ../YmlRaw.h
 C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlRaw.h
 
@@ -71,8 +111,8 @@ C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlMap.h
 C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlMap.h
 ../../globalheaders.h
 C:/Users/Thaumy/Desktop/yparser proj/yparser/include/globalheaders.h
-../../interface/interface.h
-C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.h
+../../interface/interface.hpp
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.hpp
 ../YmlRaw.h
 C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlRaw.h
 
@@ -83,10 +123,14 @@ C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlScalar.h
 C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/derived/YmlScalar.h
 ../../globalheaders.h
 C:/Users/Thaumy/Desktop/yparser proj/yparser/include/globalheaders.h
-../../interface/interface.h
-C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.h
+../../interface/interface.hpp
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.hpp
 ../YmlRaw.h
 C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlRaw.h
+
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/util/util.cpp
+util.h
+C:/Users/Thaumy/Desktop/yparser proj/yparser/include/util/util.h
 
 C:/Users/Thaumy/Desktop/yparser proj/yparser/include/util/util.h
 ../globalheaders.h

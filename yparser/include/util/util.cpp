@@ -7,14 +7,14 @@
 #define Self util
 
 
-string Self::regexSingleSearch(const string &str, const string &expr, const int &position) {
+string Self::reg::singleSearch(const string &str, const string &expr, const int &position) {
     smatch sm;
     regex_search(str, sm, regex(expr));
 
     return sm[position].str();
 }
 
-vector<string> Self::regexMultiSearch(const string &str, const string &expr, const int &position) {
+vector<string> Self::reg::multiSearch(const string &str, const string &expr, const int &position) {
     vector<string> results;
 
     string::const_iterator pos = str.begin();
@@ -45,7 +45,7 @@ string Self::stringToSHA256(const string &str) {
     return stream.str();
 }
 
-void Self::fixIndentation(string &yml) {
+void Self::yml::fixIndentation(string &yml) {
     //cout << "fixIndentation" << endl;
     auto mode = regex_constants::format_first_only;//只搜索第一个匹配项
     {//对奇数缩进增加一个空格
@@ -69,18 +69,18 @@ void Self::fixIndentation(string &yml) {
     }
 }
 
-void Self::delAnnotation(string &yml) {
+void Self::yml::delAnnotation(string &yml) {
     //cout << "delAnnotation" << endl;
     regex expr(R"( #.+)");
     yml = regex_replace(yml, expr, "");
 }
 
-void Self::decIndentation(string &yml) {
+void Self::yml::decIndentation(string &yml) {
     regex expr(R"(  (?=\w|-))");
     yml = regex_replace(yml, expr, "");
 }
 
-void Self::delBlankLine(string &yml) {
+void Self::yml::delBlankLine(string &yml) {
     //cout << "delBlankLine" << endl;
     {//去除最后一行之前的所有空行
         regex expr(R"(\n( *\n*)*(?:\n))");
@@ -92,7 +92,7 @@ void Self::delBlankLine(string &yml) {
     }
 }
 
-void Self::delLineEndSpace(string &yml) {
+void Self::yml::delLineEndSpace(string &yml) {
     //cout << "delLineEndSpace" << endl;
     regex expr(R"( +(?=\n)| +$)");
     yml = regex_replace(yml, expr, "");

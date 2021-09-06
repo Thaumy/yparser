@@ -84,13 +84,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/list_key_parse_err.hpp">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/list_value_parse_err.hpp">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/map_key_parse_err.hpp">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/map_value_parse_err.hpp">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/scalar_key_parse_err.hpp">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/derived/scalar_value_parse_err.hpp">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/yparser_error.cpp">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="C:/Users/Thaumy/Desktop/yparser proj/yparser/include/exception/yparser_error.h">
+			<Option target="yparser"/>
+		</Unit>
 		<Unit filename="C:/Users/Thaumy/Desktop/yparser proj/yparser/include/globalheaders.h">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.cpp">
-			<Option target="yparser"/>
-		</Unit>
-		<Unit filename="C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.h">
+		<Unit filename="C:/Users/Thaumy/Desktop/yparser proj/yparser/include/interface/interface.hpp">
 			<Option target="yparser"/>
 		</Unit>
 		<Unit filename="C:/Users/Thaumy/Desktop/yparser proj/yparser/include/type/YmlRaw.cpp">

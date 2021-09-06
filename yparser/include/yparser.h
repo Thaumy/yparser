@@ -2,7 +2,7 @@
 #define YPARSER_YPARSER_H
 
 #include "util/util.h"
-#include "interface/interface.h"
+#include "interface/interface.hpp"
 #include "type/YmlRaw.h"
 #include "type/derived/YmlMap.h"
 #include "type/derived/YmlList.h"
