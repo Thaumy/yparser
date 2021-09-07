@@ -3,4 +3,4 @@ project(easyio)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_library(easyio easyio.h easyio.cpp)
+add_library(easyio STATIC easyio.h easyio.cpp)

@@ -11,15 +11,35 @@
 
 
 namespace yparser {
+    //yml映射
     class YmlMap : public YmlRaw, public IKeyValueTangible<string, string> {
     public:
-        explicit YmlMap(const string &);
+        YmlMap();//由于C++不支持程序集访问级别，故此处不使用键构造
+
+        //使用yml构造
+        explicit YmlMap(const string &yml);
+
+        //序列化到字符串
+        string serialize();
 
     public:
         //将YmlNode转换为YmlMap
         static YmlMap *with(const YmlRaw *);
 
     public:
+        //设置键
+        void setKey(const string &key) override;
+
+        //添加元素
+        void addElement(const string &key, const YmlRaw &value);
+
+        //取得元素
+        YmlRaw getElementValue(const string &key);
+
+        //取元素值列表
+        vector<YmlRaw> getElementValues();
+
+    private:
         map<string, YmlRaw> elements;
     };
 }

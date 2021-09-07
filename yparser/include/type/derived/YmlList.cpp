@@ -10,6 +10,10 @@
 #define Self yparser::YmlList
 
 
+Self::YmlList() : YmlRaw(
+        "zero parameter constructor of YmlList",//标识到yml方便debug
+        list) {}
+
 Self::YmlList(const string &yml) : YmlRaw(yml) {
     {//初始化key
         auto result = regSS(yml, R"((\w+):\n  -)", 1);
@@ -42,6 +46,40 @@ Self::YmlList(const string &yml) : YmlRaw(yml) {
             throw list_value_parse_err
                     ("error occurred when parsing this into std::vector:\n" + yml);
     }
+}
+
+string Self::serialize() {
+    ostringstream serialized;//提高拼接效率
+    serialized << getKey() << ":\n";
+
+    using namespace util::yml;
+    for (const auto &el:elements) {
+        auto el_string = el.toString();
+        if (isSingleLine(el_string))
+            serialized << "  - " << el_string << "\n";//最后会产生空行
+        else {//对非单行文本缩进两次
+            incIndentation(el_string);
+            incIndentation(el_string);
+            serialized << "  -\n"
+                       << el_string << "\n";//最后会产生空行
+        }
+    }
+
+    raw = serialized.str();
+    formatPipeline(raw);
+    return raw;
+}
+
+void Self::setKey(const string &newKey) {
+    IKeyValueTangible::setKey(newKey);
+}
+
+void Self::addElement(const YmlRaw &element) {
+    this->elements.emplace_back(element);
+}
+
+vector<yparser::YmlRaw> Self::getElements() {
+    return elements;
 }
 
 Self *Self::with(const YmlRaw *ymlRaw) {

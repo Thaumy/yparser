@@ -13,7 +13,8 @@ set(f5 ${root}/type/YmlRaw.h ${root}/type/YmlRaw.cpp)
 set(f6 ${root}/type/derived/YmlMap.h ${root}/type/derived/YmlMap.cpp)
 set(f7 ${root}/type/derived/YmlList.h ${root}/type/derived/YmlList.cpp)
 set(f8 ${root}/type/derived/YmlScalar.h ${root}/type/derived/YmlScalar.cpp)
-set(functions ${f1} ${f2} ${f3} ${f4} ${f5} ${f6} ${f7} ${f8})
+set(f9 ${root}/type/derived/YmlRoot.h ${root}/type/derived/YmlRoot.cpp)
+set(functions ${f1} ${f2} ${f3} ${f4} ${f5} ${f6} ${f7} ${f8} ${f9})
 
 set(ef ${root}/exception)
 set(e1 ${ef}/yparser_error.h ${ef}/yparser_error.cpp)
@@ -34,5 +35,5 @@ link_directories(C:/Boost/lib)
 link_libraries(easyio)
 link_libraries(openssl libcrypto libssl)
 
-add_library(yparser ${coms})
+add_library(yparser STATIC ${coms})
 

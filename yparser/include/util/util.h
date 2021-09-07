@@ -20,6 +20,12 @@ namespace util {
         vector<string> multiSearch(const string &str, const string &expr, const int &position = 0);
     }
     namespace yml {
+        //判断yml是否为单行文本
+        bool isSingleLine(string &);
+
+        //yml格式化流水线
+        void formatPipeline(string &);
+
         //修复yml缩进
         void fixIndentation(string &);
 
@@ -28,6 +34,9 @@ namespace util {
 
         //减少yml缩进(2space)
         void decIndentation(string &);
+
+        //增加yml缩进(2space)
+        void incIndentation(string &);
 
         //删除yml空行
         void delBlankLine(string &);

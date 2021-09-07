@@ -10,6 +10,10 @@
 #define Self yparser::YmlMap
 
 
+Self::YmlMap() : YmlRaw(
+        "zero parameter constructor of YmlMap",//标识到yml方便debug
+        mapping) {}
+
 Self::YmlMap(const string &yml) : YmlRaw(yml) {
     {//初始化key
         //regSS(yml, R"((?:^|\n)(\w+):(?: .+|\n)(?:(?:  )+.+\n*)*)", 1);
@@ -34,7 +38,8 @@ Self::YmlMap(const string &yml) : YmlRaw(yml) {
         //(?:^|\n)(\w+:(?: .+|\n)(?:(?:  )+.+\n*)*)(?=\n|$)
         //(?:^|\n)(\w+):(?: .+|\n)(?:(?:  )+.+\n*)*(?=\n|$)
         auto keys = regMS(this->getValue(), R"(^\w+)");//perl syntax
-        auto raws = regMS(this->getValue(), R"(^\w+:[\n ](((  )+[^\n]+\n*)+(?=\n)|[^\n]+))");//perl syntax
+        auto raws = regMS(this->getValue(),
+                          R"(^\w+:[\n ](((  )+[^\n]+\n*)+(?=\n)|[^\n]+))");//perl syntax
         if (keys.size() != raws.size() || keys.empty())
             //无法解析value到std::map容器时报错
             throw map_value_parse_err
@@ -49,10 +54,46 @@ Self::YmlMap(const string &yml) : YmlRaw(yml) {
     }
 }
 
+string Self::serialize() {
+    ostringstream serialized;//提高拼接效率
+    serialized << getKey() << ":\n";
+
+    for (const auto &el:elements) {
+        auto el_string = el.second.toString();
+        util::yml::incIndentation(el_string);
+
+        serialized << el_string << "\n";//最后会产生空行
+    }
+    raw = serialized.str();
+    util::yml::formatPipeline(raw);
+    return raw;
+}
+
 Self *Self::with(const YmlRaw *ymlRaw) {//TODO 记得改引用
     auto raw = ymlRaw->toString();
     if (ymlRaw->isMap())
         return new YmlMap(raw);
     else
         throw bad_cast();
+}
+
+void Self::setKey(const string &key) {
+    IKeyValueTangible::setKey(key);
+}
+
+void Self::addElement(const string &key, const yparser::YmlRaw &value) {
+    auto el = pair<string, YmlRaw>(key, value);
+    this->elements.insert(el);
+}
+
+yparser::YmlRaw Self::getElementValue(const string &key) {
+    return this->elements.at(key);
+}
+
+vector<yparser::YmlRaw> Self::getElementValues() {
+    vector<YmlRaw> values;
+    for (auto el:this->elements) {
+        values.emplace_back(el.second);
+    }
+    return values;
 }

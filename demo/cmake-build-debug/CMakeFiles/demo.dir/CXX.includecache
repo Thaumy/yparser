@@ -100,6 +100,14 @@ exception/derived/scalar_value_parse_err.hpp
 ../YmlRaw.h
 ../../yparser/include/type/YmlRaw.h
 
+../../yparser/include/type/derived/YmlRoot.h
+../../globalheaders.h
+../../yparser/include/globalheaders.h
+../../interface/interface.hpp
+../../yparser/include/interface/interface.hpp
+../YmlRaw.h
+../../yparser/include/type/YmlRaw.h
+
 ../../yparser/include/type/derived/YmlScalar.h
 ../../globalheaders.h
 ../../yparser/include/globalheaders.h
@@ -125,6 +133,8 @@ type/derived/YmlList.h
 ../../yparser/include/type/derived/YmlList.h
 type/derived/YmlScalar.h
 ../../yparser/include/type/derived/YmlScalar.h
+type/derived/YmlRoot.h
+../../yparser/include/type/derived/YmlRoot.h
 
 C:/Boost/include/boost-1_77/boost/assert.hpp
 boost/config.hpp

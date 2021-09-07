@@ -27,12 +27,6 @@ namespace yparser {
         //使用字符串构造
         explicit YmlRaw(string yml);
 
-        virtual ~YmlRaw() = default;
-
-    private:
-        //使用字符串构造，同时指明类型（此构造对用户透明）
-        explicit YmlRaw(string yml, Type type);
-
     public:
         //自解析
         vector<YmlRaw *> parse(const bool &lazy = true) const;
@@ -49,8 +43,13 @@ namespace yparser {
         //是文本（即非Map、List或Scalar）
         bool isText() const;
 
-    private:
+    protected:
         string raw;//yml原生字符串
+
+        //使用字符串构造，同时指明类型（此构造对用户透明）
+        explicit YmlRaw(string yml, Type type);
+
+    private:
         Type type;//当前类型，对用户透明
 
         //是映射

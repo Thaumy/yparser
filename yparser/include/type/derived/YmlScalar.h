@@ -11,16 +11,24 @@
 
 
 namespace yparser {
+    //yml纯量
     class YmlScalar : public YmlRaw, public IKeyValueTangible<string, string> {
     public:
-        explicit YmlScalar(const string &);
+        //使用键值对构造
+        YmlScalar(const string &key, const string &value);
+
+        //使用yml构造
+        explicit YmlScalar(const string &yml);
+
+        //序列化到字符串
+        string serialize();
+
+    public:
+        //TODO
 
     public:
         //将YmlNode转换为YmlScalar
         static YmlScalar *with(const YmlRaw *);
-
-    public:
-        //TODO
     };
 }
 

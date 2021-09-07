@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Thaumy/Desktop/yparser proj/easyio
+# Install script for directory: H:/proj/cpp/yparser proj/easyio
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Thaumy/Desktop/yparser proj/easyio/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "H:/proj/cpp/yparser proj/easyio/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

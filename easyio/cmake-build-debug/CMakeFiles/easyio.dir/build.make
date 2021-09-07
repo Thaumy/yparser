@@ -62,10 +62,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Thaumy\Desktop\yparser proj\easyio"
+CMAKE_SOURCE_DIR = "H:\proj\cpp\yparser proj\easyio"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Thaumy\Desktop\yparser proj\easyio\cmake-build-debug"
+CMAKE_BINARY_DIR = "H:\proj\cpp\yparser proj\easyio\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/easyio.dir/depend.make
@@ -78,16 +78,16 @@ include CMakeFiles/easyio.dir/flags.make
 
 CMakeFiles/easyio.dir/easyio.cpp.obj: CMakeFiles/easyio.dir/flags.make
 CMakeFiles/easyio.dir/easyio.cpp.obj: ../easyio.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Thaumy\Desktop\yparser proj\easyio\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/easyio.dir/easyio.cpp.obj"
-	D:\app\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\easyio.dir\easyio.cpp.obj -c "C:\Users\Thaumy\Desktop\yparser proj\easyio\easyio.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="H:\proj\cpp\yparser proj\easyio\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/easyio.dir/easyio.cpp.obj"
+	D:\app\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\easyio.dir\easyio.cpp.obj -c "H:\proj\cpp\yparser proj\easyio\easyio.cpp"
 
 CMakeFiles/easyio.dir/easyio.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/easyio.dir/easyio.cpp.i"
-	D:\app\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Thaumy\Desktop\yparser proj\easyio\easyio.cpp" > CMakeFiles\easyio.dir\easyio.cpp.i
+	D:\app\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "H:\proj\cpp\yparser proj\easyio\easyio.cpp" > CMakeFiles\easyio.dir\easyio.cpp.i
 
 CMakeFiles/easyio.dir/easyio.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/easyio.dir/easyio.cpp.s"
-	D:\app\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Thaumy\Desktop\yparser proj\easyio\easyio.cpp" -o CMakeFiles\easyio.dir\easyio.cpp.s
+	D:\app\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "H:\proj\cpp\yparser proj\easyio\easyio.cpp" -o CMakeFiles\easyio.dir\easyio.cpp.s
 
 # Object files for target easyio
 easyio_OBJECTS = \
@@ -99,7 +99,7 @@ easyio_EXTERNAL_OBJECTS =
 libeasyio.a: CMakeFiles/easyio.dir/easyio.cpp.obj
 libeasyio.a: CMakeFiles/easyio.dir/build.make
 libeasyio.a: CMakeFiles/easyio.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Thaumy\Desktop\yparser proj\easyio\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libeasyio.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="H:\proj\cpp\yparser proj\easyio\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libeasyio.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\easyio.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\easyio.dir\link.txt --verbose=$(VERBOSE)
 
@@ -113,6 +113,6 @@ CMakeFiles/easyio.dir/clean:
 .PHONY : CMakeFiles/easyio.dir/clean
 
 CMakeFiles/easyio.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Thaumy\Desktop\yparser proj\easyio" "C:\Users\Thaumy\Desktop\yparser proj\easyio" "C:\Users\Thaumy\Desktop\yparser proj\easyio\cmake-build-debug" "C:\Users\Thaumy\Desktop\yparser proj\easyio\cmake-build-debug" "C:\Users\Thaumy\Desktop\yparser proj\easyio\cmake-build-debug\CMakeFiles\easyio.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "H:\proj\cpp\yparser proj\easyio" "H:\proj\cpp\yparser proj\easyio" "H:\proj\cpp\yparser proj\easyio\cmake-build-debug" "H:\proj\cpp\yparser proj\easyio\cmake-build-debug" "H:\proj\cpp\yparser proj\easyio\cmake-build-debug\CMakeFiles\easyio.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/easyio.dir/depend
 

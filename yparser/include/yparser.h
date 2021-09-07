@@ -7,5 +7,6 @@
 #include "type/derived/YmlMap.h"
 #include "type/derived/YmlList.h"
 #include "type/derived/YmlScalar.h"
+#include "type/derived/YmlRoot.h"
 
 #endif //YPARSER_YPARSER_H

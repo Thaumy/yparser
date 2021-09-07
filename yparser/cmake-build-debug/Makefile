@@ -250,6 +250,33 @@ include/type/derived/YmlMap.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\yparser.dir\build.make CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.s
 .PHONY : include/type/derived/YmlMap.cpp.s
 
+include/type/derived/YmlRoot.obj: include/type/derived/YmlRoot.cpp.obj
+
+.PHONY : include/type/derived/YmlRoot.obj
+
+# target to build an object file
+include/type/derived/YmlRoot.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\yparser.dir\build.make CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj
+.PHONY : include/type/derived/YmlRoot.cpp.obj
+
+include/type/derived/YmlRoot.i: include/type/derived/YmlRoot.cpp.i
+
+.PHONY : include/type/derived/YmlRoot.i
+
+# target to preprocess a source file
+include/type/derived/YmlRoot.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\yparser.dir\build.make CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.i
+.PHONY : include/type/derived/YmlRoot.cpp.i
+
+include/type/derived/YmlRoot.s: include/type/derived/YmlRoot.cpp.s
+
+.PHONY : include/type/derived/YmlRoot.s
+
+# target to generate assembly for a file
+include/type/derived/YmlRoot.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\yparser.dir\build.make CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.s
+.PHONY : include/type/derived/YmlRoot.cpp.s
+
 include/type/derived/YmlScalar.obj: include/type/derived/YmlScalar.cpp.obj
 
 .PHONY : include/type/derived/YmlScalar.obj
@@ -325,6 +352,9 @@ help:
 	@echo ... include/type/derived/YmlMap.obj
 	@echo ... include/type/derived/YmlMap.i
 	@echo ... include/type/derived/YmlMap.s
+	@echo ... include/type/derived/YmlRoot.obj
+	@echo ... include/type/derived/YmlRoot.i
+	@echo ... include/type/derived/YmlRoot.s
 	@echo ... include/type/derived/YmlScalar.obj
 	@echo ... include/type/derived/YmlScalar.i
 	@echo ... include/type/derived/YmlScalar.s

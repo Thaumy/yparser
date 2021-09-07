@@ -14,24 +14,24 @@ namespace interface {
     class IKeyValueTangible {//mixin mode
     public:
         //得到键
-        K getKey() const {
-            return K(key);
+        virtual K getKey() const {
+            return this->key;
         }
 
         //得到值
-        V getValue() const {
-            return V(value);
+        virtual V getValue() const {
+            return this->value;
         }
 
     protected:
         //设置键
-        void setKey(K newKey) {
-            this->key = std::move(newKey);
+        virtual void setKey(const K &newKey) {
+            this->key = newKey;
         }
 
         //设置值
-        void setValue(V newValue) {
-            this->value = std::move(newValue);
+        virtual void setValue(const V &newValue) {
+            this->value = newValue;
         }
 
     private:
@@ -42,12 +42,14 @@ namespace interface {
     //可哈希接口
     class IHashable {
     public:
+        //转SHA256
         virtual string SHA256() const = 0;
     };
 
     //可字符串接口
     class IStringable {
     public:
+        //转字符串
         virtual string toString() const = 0;
     };
 }

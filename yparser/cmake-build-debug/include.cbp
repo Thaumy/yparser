@@ -134,6 +134,12 @@
 		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlMap.h">
 			<Option target="yparser"/>
 		</Unit>
+		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.cpp">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.h">
+			<Option target="yparser"/>
+		</Unit>
 		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlScalar.cpp">
 			<Option target="yparser"/>
 		</Unit>

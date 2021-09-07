@@ -10,6 +10,12 @@
 #define Self yparser::YmlScalar
 
 
+Self::YmlScalar(const string &key, const string &value) :
+        YmlRaw(key + ": " + value, scalar) {
+    setKey(key);
+    setValue(value);
+}
+
 Self::YmlScalar(const string &yml) : YmlRaw(yml) {
     {//初始化key
         //(\w+): .+
@@ -30,6 +36,10 @@ Self::YmlScalar(const string &yml) : YmlRaw(yml) {
             throw scalar_value_parse_err
                     ("error occurred when parsing this:\n" + yml);
     }
+}
+
+string Self::serialize() {
+    return getKey() + ": " + getValue();
 }
 
 Self *Self::with(const YmlRaw *ymlRaw) {

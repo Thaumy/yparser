@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Thaumy/Desktop/yparser proj/easyio/easyio.cpp
+H:/proj/cpp/yparser proj/easyio/easyio.cpp
 easyio.h
-C:/Users/Thaumy/Desktop/yparser proj/easyio/easyio.h
+H:/proj/cpp/yparser proj/easyio/easyio.h
 
-C:/Users/Thaumy/Desktop/yparser proj/easyio/easyio.h
+H:/proj/cpp/yparser proj/easyio/easyio.h
 string
 -
 iostream

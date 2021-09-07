@@ -15,7 +15,9 @@ class yparser_error : public exception {
 public:
     explicit yparser_error(const string &message);
 
-    const char *what() const _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_USE_NOEXCEPT override;
+    const char *what() const noexcept override {
+        return this->message.c_str();
+    }
 
 private:
     string message;

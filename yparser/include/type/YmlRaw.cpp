@@ -22,16 +22,7 @@ string Self::toString() const {
 
 Self::YmlRaw(string yml) {//默认用户输入需要格式化，只有此构造才会调用格式化函数流水线
     this->type = text;//默认为文本类型
-
-    using namespace util::yml;
-    function<void(string &)> pipeline[] =//格式化函数流水线
-            {delAnnotation,//删除注释
-             delBlankLine,//清除空行
-             delLineEndSpace,//清除行尾空格
-             fixIndentation};//修复错误缩进
-    for (const auto &f:pipeline)
-        f(yml);//按照流水线处理yml
-
+    util::yml::formatPipeline(yml);//格式化
     this->raw = std::move(yml);//右值引用以提升性能
 }
 
