@@ -22,6 +22,10 @@ namespace yparser {
 
         //序列化到字符串
         string serialize();
+
+        //编译表达式
+        void complie();
+
     public:
         //设置键
         void setKey(const string &newKey) override;
@@ -33,8 +37,8 @@ namespace yparser {
         vector<YmlRaw> getElements();
 
     public:
-        //将YmlNode转换为YmlList
-        static YmlList *with(const YmlRaw *);//TODO 建议接口化
+        //将YmlRaw转换为YmlList
+        static YmlList with(const YmlRaw &);//TODO 考虑接口化
 
     private:
         vector<YmlRaw> elements;

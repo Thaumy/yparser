@@ -14,7 +14,7 @@ Self::YmlMap() : YmlRaw(
         "zero parameter constructor of YmlMap",//标识到yml方便debug
         mapping) {}
 
-Self::YmlMap(const string &yml) : YmlRaw(yml) {
+Self::YmlMap(const string &yml) : YmlRaw(yml, mapping) {
     {//初始化key
         //regSS(yml, R"((?:^|\n)(\w+):(?: .+|\n)(?:(?:  )+.+\n*)*)", 1);
         auto result = regSS(yml, R"(\w+(?=:\n  \w))");//perl syntax
@@ -39,7 +39,7 @@ Self::YmlMap(const string &yml) : YmlRaw(yml) {
         //(?:^|\n)(\w+):(?: .+|\n)(?:(?:  )+.+\n*)*(?=\n|$)
         auto keys = regMS(this->getValue(), R"(^\w+)");//perl syntax
         auto raws = regMS(this->getValue(),
-                          R"(^\w+:[\n ](((  )+[^\n]+\n*)+(?=\n)|[^\n]+))");//perl syntax
+                          R"(^\w+:[\n ](((  )+[^\n]+\n*)+(?=\n*)|[^\n]+))");//perl syntax
         if (keys.size() != raws.size() || keys.empty())
             //无法解析value到std::map容器时报错
             throw map_value_parse_err
@@ -48,7 +48,8 @@ Self::YmlMap(const string &yml) : YmlRaw(yml) {
             for (int i = 0; i < keys.size(); ++i) {
                 auto el_key = keys.at(i);
                 auto el_raw = raws.at(i);
-                auto el = pair<string, YmlRaw>(el_key, YmlRaw(el_raw));
+                //标记类型后填入容器
+                auto el = pair<string, YmlRaw>(el_key, YmlRaw(el_raw, getType(el_raw)));
                 elements.insert(el);
             }
     }
@@ -64,15 +65,20 @@ string Self::serialize() {
 
         serialized << el_string << "\n";//最后会产生空行
     }
-    raw = serialized.str();
-    util::yml::formatPipeline(raw);
-    return raw;
+
+    auto result = serialized.str();
+    util::yml::delBlankLine(result);//删除空行
+    return result;
 }
 
-Self *Self::with(const YmlRaw *ymlRaw) {//TODO 记得改引用
-    auto raw = ymlRaw->toString();
-    if (ymlRaw->isMap())
-        return new YmlMap(raw);
+void Self::complie() {
+    raw = serialize();
+}
+
+Self Self::with(const YmlRaw &ymlRaw) {
+    auto raw = ymlRaw.toString();
+    if (ymlRaw.isMap())
+        return YmlMap(raw);
     else
         throw bad_cast();
 }

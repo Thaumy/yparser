@@ -98,6 +98,9 @@
 		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/exception/derived/map_value_parse_err.hpp">
 			<Option target="yparser"/>
 		</Unit>
+		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/exception/derived/root_parse_err.hpp">
+			<Option target="yparser"/>
+		</Unit>
 		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/exception/derived/scalar_key_parse_err.hpp">
 			<Option target="yparser"/>
 		</Unit>
@@ -114,6 +117,12 @@
 			<Option target="yparser"/>
 		</Unit>
 		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/interface/interface.hpp">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/parser/parser.cpp">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/parser/parser.h">
 			<Option target="yparser"/>
 		</Unit>
 		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/type/YmlRaw.cpp">

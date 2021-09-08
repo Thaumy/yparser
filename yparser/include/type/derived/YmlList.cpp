@@ -3,6 +3,7 @@
 //
 
 #include "YmlList.h"
+#include "YmlRoot.h"
 
 #define regSS util::reg::singleSearch
 #define regMS util::reg::multiSearch
@@ -14,7 +15,7 @@ Self::YmlList() : YmlRaw(
         "zero parameter constructor of YmlList",//标识到yml方便debug
         list) {}
 
-Self::YmlList(const string &yml) : YmlRaw(yml) {
+Self::YmlList(const string &yml) : YmlRaw(yml, list) {
     {//初始化key
         auto result = regSS(yml, R"((\w+):\n  -)", 1);
         if (!result.empty())
@@ -40,7 +41,11 @@ Self::YmlList(const string &yml) : YmlRaw(yml) {
         if (!result.empty()) {
             for (auto el:result) {
                 util::yml::decIndentation(el);
-                elements.emplace_back(YmlRaw(el));
+                if (isRoot(el)) {//只有在List的情况下才可能产生聚合根
+                    YmlRoot root_el(el);
+                    elements.emplace_back(root_el);
+                } else
+                    elements.emplace_back(YmlRaw(el, YmlRaw::getType(el)));
             }
         } else//无法解析value到std::vector容器时
             throw list_value_parse_err
@@ -65,9 +70,21 @@ string Self::serialize() {
         }
     }
 
-    raw = serialized.str();
-    formatPipeline(raw);
-    return raw;
+    auto result = serialized.str();
+    delBlankLine(result);//删除空行
+    return result;
+}
+
+void Self::complie() {
+    raw = serialize();
+}
+
+Self Self::with(const YmlRaw &ymlRaw) {
+    auto raw = ymlRaw.toString();
+    if (ymlRaw.isList())
+        return YmlList(raw);
+    else
+        throw bad_cast();
 }
 
 void Self::setKey(const string &newKey) {
@@ -80,12 +97,4 @@ void Self::addElement(const YmlRaw &element) {
 
 vector<yparser::YmlRaw> Self::getElements() {
     return elements;
-}
-
-Self *Self::with(const YmlRaw *ymlRaw) {
-    auto raw = ymlRaw->toString();
-    if (ymlRaw->isList())
-        return new YmlList(raw);
-    else
-        throw bad_cast();
 }

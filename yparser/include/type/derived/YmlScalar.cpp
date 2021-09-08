@@ -16,7 +16,7 @@ Self::YmlScalar(const string &key, const string &value) :
     setValue(value);
 }
 
-Self::YmlScalar(const string &yml) : YmlRaw(yml) {
+Self::YmlScalar(const string &yml) : YmlRaw(yml, scalar) {
     {//初始化key
         //(\w+): .+
         auto result = regSS(yml, R"(^\w+)");//perl syntax
@@ -42,10 +42,10 @@ string Self::serialize() {
     return getKey() + ": " + getValue();
 }
 
-Self *Self::with(const YmlRaw *ymlRaw) {
-    auto raw = ymlRaw->toString();
-    if (ymlRaw->isScalar())
-        return new YmlScalar(raw);
+Self Self::with(const YmlRaw &ymlRaw) {
+    auto raw = ymlRaw.toString();
+    if (ymlRaw.isScalar())
+        return YmlScalar(raw);
     else
         throw bad_cast();
 }

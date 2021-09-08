@@ -6,11 +6,13 @@ CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/list_k
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/list_value_parse_err.hpp
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/map_key_parse_err.hpp
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/map_value_parse_err.hpp
+CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/root_parse_err.hpp
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/scalar_key_parse_err.hpp
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/scalar_value_parse_err.hpp
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/yparser_error.h
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/globalheaders.h
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/interface/interface.hpp
+CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/parser/parser.h
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/type/YmlRaw.h
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/type/derived/YmlList.h
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/type/derived/YmlMap.h
@@ -656,4 +658,6 @@ CMakeFiles/demo.dir/main.cpp.obj: D:/app/OpenSSL-Win64/include/openssl/opensslco
 CMakeFiles/demo.dir/main.cpp.obj: D:/app/OpenSSL-Win64/include/openssl/opensslv.h
 CMakeFiles/demo.dir/main.cpp.obj: D:/app/OpenSSL-Win64/include/openssl/sha.h
 CMakeFiles/demo.dir/main.cpp.obj: ../main.cpp
+CMakeFiles/demo.dir/main.cpp.obj: ../tests/parse_test.hpp
+CMakeFiles/demo.dir/main.cpp.obj: ../tests/serialize_test.hpp
 

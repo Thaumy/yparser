@@ -54,17 +54,6 @@ bool Self::yml::isSingleLine(string &yml) {
     return !regex_search(yml, expr, mode);
 }
 
-void Self::yml::formatPipeline(string &yml) {
-    //格式化函数流水线
-    function<void(string &)> pipeline[] =
-            {delAnnotation,//删除注释
-             delBlankLine,//清除空行
-             delLineEndSpace,//清除行尾空格
-             fixIndentation};//修复错误缩进
-    for (const auto &f:pipeline)
-        f(yml);//按照流水线处理yml
-}
-
 void Self::yml::fixIndentation(string &yml) {
     //cout << "fixIndentation" << endl;
     auto mode = regex_constants::format_first_only;//只搜索第一个匹配项
@@ -127,4 +116,15 @@ void Self::yml::delLineEndSpace(string &yml) {
     // +(?=\n)| +$
     regex expr(R"( *$)");//perl syntax
     yml = regex_replace(yml, expr, "");
+}
+
+void Self::yml::formatPipeline(string &yml) {
+    //格式化函数流水线
+    function<void(string &)> pipeline[] =
+            {delAnnotation,//删除注释
+             delBlankLine,//清除空行
+             delLineEndSpace,//清除行尾空格
+             fixIndentation};//修复错误缩进
+    for (const auto &f:pipeline)
+        f(yml);//按照流水线处理yml
 }

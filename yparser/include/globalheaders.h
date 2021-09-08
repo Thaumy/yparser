@@ -24,5 +24,6 @@
 #include "exception/derived/list_value_parse_err.hpp"
 #include "exception/derived/scalar_key_parse_err.hpp"
 #include "exception/derived/scalar_value_parse_err.hpp"
+#include "exception/derived/root_parse_err.hpp"
 
 #endif //INCLUDE_GLOBALHEADERS_H

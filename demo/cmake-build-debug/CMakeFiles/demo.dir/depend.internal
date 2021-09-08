@@ -7,11 +7,13 @@ CMakeFiles/demo.dir/main.cpp.obj
  ../../yparser/include/exception/derived/list_value_parse_err.hpp
  ../../yparser/include/exception/derived/map_key_parse_err.hpp
  ../../yparser/include/exception/derived/map_value_parse_err.hpp
+ ../../yparser/include/exception/derived/root_parse_err.hpp
  ../../yparser/include/exception/derived/scalar_key_parse_err.hpp
  ../../yparser/include/exception/derived/scalar_value_parse_err.hpp
  ../../yparser/include/exception/yparser_error.h
  ../../yparser/include/globalheaders.h
  ../../yparser/include/interface/interface.hpp
+ ../../yparser/include/parser/parser.h
  ../../yparser/include/type/YmlRaw.h
  ../../yparser/include/type/derived/YmlList.h
  ../../yparser/include/type/derived/YmlMap.h
@@ -657,3 +659,5 @@ CMakeFiles/demo.dir/main.cpp.obj
  D:/app/OpenSSL-Win64/include/openssl/opensslv.h
  D:/app/OpenSSL-Win64/include/openssl/sha.h
  H:/proj/cpp/yparser proj/demo/main.cpp
+ H:/proj/cpp/yparser proj/demo/tests/parse_test.hpp
+ H:/proj/cpp/yparser proj/demo/tests/serialize_test.hpp

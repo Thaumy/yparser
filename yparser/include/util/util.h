@@ -47,4 +47,5 @@ namespace util {
 
     string stringToSHA256(const string &);
 }
+
 #endif //YPARSER_UTIL_H

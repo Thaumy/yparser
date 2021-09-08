@@ -27,8 +27,8 @@ namespace yparser {
         //TODO
 
     public:
-        //将YmlNode转换为YmlScalar
-        static YmlScalar *with(const YmlRaw *);
+        //将YmlRaw转换为YmlScalar
+        static YmlScalar with(const YmlRaw &);
     };
 }
 

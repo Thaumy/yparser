@@ -26,6 +26,8 @@ sstream
 
 ../../yparser/include/exception/derived/map_value_parse_err.hpp
 
+../../yparser/include/exception/derived/root_parse_err.hpp
+
 ../../yparser/include/exception/derived/scalar_key_parse_err.hpp
 
 ../../yparser/include/exception/derived/scalar_value_parse_err.hpp
@@ -69,10 +71,22 @@ exception/derived/scalar_key_parse_err.hpp
 ../../yparser/include/exception/derived/scalar_key_parse_err.hpp
 exception/derived/scalar_value_parse_err.hpp
 ../../yparser/include/exception/derived/scalar_value_parse_err.hpp
+exception/derived/root_parse_err.hpp
+../../yparser/include/exception/derived/root_parse_err.hpp
 
 ../../yparser/include/interface/interface.hpp
 ../globalheaders.h
 ../../yparser/include/globalheaders.h
+
+../../yparser/include/parser/parser.h
+../type/YmlRaw.h
+../../yparser/include/type/YmlRaw.h
+../type/derived/YmlMap.h
+../../yparser/include/type/derived/YmlMap.h
+../type/derived/YmlList.h
+../../yparser/include/type/derived/YmlList.h
+../type/derived/YmlScalar.h
+../../yparser/include/type/derived/YmlScalar.h
 
 ../../yparser/include/type/YmlRaw.h
 ../globalheaders.h
@@ -121,10 +135,26 @@ exception/derived/scalar_value_parse_err.hpp
 ../../yparser/include/globalheaders.h
 
 ../../yparser/include/yparser.h
-util/util.h
-../../yparser/include/util/util.h
 interface/interface.hpp
 ../../yparser/include/interface/interface.hpp
+parser/parser.h
+../../yparser/include/parser/parser.h
+util/util.h
+../../yparser/include/util/util.h
+exception/yparser_error.h
+../../yparser/include/exception/yparser_error.h
+exception/derived/list_key_parse_err.hpp
+../../yparser/include/exception/derived/list_key_parse_err.hpp
+exception/derived/list_value_parse_err.hpp
+../../yparser/include/exception/derived/list_value_parse_err.hpp
+exception/derived/map_key_parse_err.hpp
+../../yparser/include/exception/derived/map_key_parse_err.hpp
+exception/derived/map_value_parse_err.hpp
+../../yparser/include/exception/derived/map_value_parse_err.hpp
+exception/derived/scalar_key_parse_err.hpp
+../../yparser/include/exception/derived/scalar_key_parse_err.hpp
+exception/derived/scalar_value_parse_err.hpp
+../../yparser/include/exception/derived/scalar_value_parse_err.hpp
 type/YmlRaw.h
 ../../yparser/include/type/YmlRaw.h
 type/derived/YmlMap.h
@@ -6077,12 +6107,26 @@ iostream
 -
 string
 -
-sstream
+tests/parse_test.hpp
+H:/proj/cpp/yparser proj/demo/tests/parse_test.hpp
+tests/serialize_test.hpp
+H:/proj/cpp/yparser proj/demo/tests/serialize_test.hpp
+
+H:/proj/cpp/yparser proj/demo/tests/parse_test.hpp
+iostream
+-
+string
 -
 yparser.h
 -
 easyio.h
 -
-openssl/sha.h
+
+H:/proj/cpp/yparser proj/demo/tests/serialize_test.hpp
+iostream
+-
+string
+-
+yparser.h
 -
 

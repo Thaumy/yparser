@@ -169,6 +169,33 @@ include/exception/yparser_error.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\yparser.dir\build.make CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.s
 .PHONY : include/exception/yparser_error.cpp.s
 
+include/parser/parser.obj: include/parser/parser.cpp.obj
+
+.PHONY : include/parser/parser.obj
+
+# target to build an object file
+include/parser/parser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\yparser.dir\build.make CMakeFiles/yparser.dir/include/parser/parser.cpp.obj
+.PHONY : include/parser/parser.cpp.obj
+
+include/parser/parser.i: include/parser/parser.cpp.i
+
+.PHONY : include/parser/parser.i
+
+# target to preprocess a source file
+include/parser/parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\yparser.dir\build.make CMakeFiles/yparser.dir/include/parser/parser.cpp.i
+.PHONY : include/parser/parser.cpp.i
+
+include/parser/parser.s: include/parser/parser.cpp.s
+
+.PHONY : include/parser/parser.s
+
+# target to generate assembly for a file
+include/parser/parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\yparser.dir\build.make CMakeFiles/yparser.dir/include/parser/parser.cpp.s
+.PHONY : include/parser/parser.cpp.s
+
 include/type/YmlRaw.obj: include/type/YmlRaw.cpp.obj
 
 .PHONY : include/type/YmlRaw.obj
@@ -343,6 +370,9 @@ help:
 	@echo ... include/exception/yparser_error.obj
 	@echo ... include/exception/yparser_error.i
 	@echo ... include/exception/yparser_error.s
+	@echo ... include/parser/parser.obj
+	@echo ... include/parser/parser.i
+	@echo ... include/parser/parser.s
 	@echo ... include/type/YmlRaw.obj
 	@echo ... include/type/YmlRaw.i
 	@echo ... include/type/YmlRaw.s

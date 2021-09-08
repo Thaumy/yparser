@@ -91,6 +91,12 @@
 		<Unit filename="H:/proj/cpp/yparser proj/demo/main.cpp">
 			<Option target="demo"/>
 		</Unit>
+		<Unit filename="H:/proj/cpp/yparser proj/demo/tests/parse_test.hpp">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="H:/proj/cpp/yparser proj/demo/tests/serialize_test.hpp">
+			<Option target="demo"/>
+		</Unit>
 		<Unit filename="H:/proj/cpp/yparser proj/demo/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

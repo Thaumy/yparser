@@ -160,10 +160,24 @@ CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.s"
 	D:\app\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "H:\proj\cpp\yparser proj\yparser\include\type\derived\YmlRoot.cpp" -o CMakeFiles\yparser.dir\include\type\derived\YmlRoot.cpp.s
 
+CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: CMakeFiles/yparser.dir/flags.make
+CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: CMakeFiles/yparser.dir/includes_CXX.rsp
+CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/parser/parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="H:\proj\cpp\yparser proj\yparser\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/yparser.dir/include/parser/parser.cpp.obj"
+	D:\app\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\yparser.dir\include\parser\parser.cpp.obj -c "H:\proj\cpp\yparser proj\yparser\include\parser\parser.cpp"
+
+CMakeFiles/yparser.dir/include/parser/parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yparser.dir/include/parser/parser.cpp.i"
+	D:\app\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "H:\proj\cpp\yparser proj\yparser\include\parser\parser.cpp" > CMakeFiles\yparser.dir\include\parser\parser.cpp.i
+
+CMakeFiles/yparser.dir/include/parser/parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yparser.dir/include/parser/parser.cpp.s"
+	D:\app\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "H:\proj\cpp\yparser proj\yparser\include\parser\parser.cpp" -o CMakeFiles\yparser.dir\include\parser\parser.cpp.s
+
 CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.obj: CMakeFiles/yparser.dir/flags.make
 CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.obj: CMakeFiles/yparser.dir/includes_CXX.rsp
 CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.obj: ../include/exception/yparser_error.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="H:\proj\cpp\yparser proj\yparser\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="H:\proj\cpp\yparser proj\yparser\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.obj"
 	D:\app\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\yparser.dir\include\exception\yparser_error.cpp.obj -c "H:\proj\cpp\yparser proj\yparser\include\exception\yparser_error.cpp"
 
 CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.i: cmake_force
@@ -182,6 +196,7 @@ yparser_OBJECTS = \
 "CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj" \
 "CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj" \
 "CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj" \
+"CMakeFiles/yparser.dir/include/parser/parser.cpp.obj" \
 "CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.obj"
 
 # External object files for target yparser
@@ -193,10 +208,11 @@ libyparser.a: CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj
 libyparser.a: CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj
 libyparser.a: CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj
 libyparser.a: CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj
+libyparser.a: CMakeFiles/yparser.dir/include/parser/parser.cpp.obj
 libyparser.a: CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.obj
 libyparser.a: CMakeFiles/yparser.dir/build.make
 libyparser.a: CMakeFiles/yparser.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="H:\proj\cpp\yparser proj\yparser\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libyparser.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="H:\proj\cpp\yparser proj\yparser\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libyparser.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\yparser.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\yparser.dir\link.txt --verbose=$(VERBOSE)
 

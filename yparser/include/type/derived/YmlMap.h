@@ -22,9 +22,12 @@ namespace yparser {
         //序列化到字符串
         string serialize();
 
+        //编译表达式
+        void complie();
+
     public:
-        //将YmlNode转换为YmlMap
-        static YmlMap *with(const YmlRaw *);
+        //将YmlRaw转换为YmlMap
+        static YmlMap with(const YmlRaw &);
 
     public:
         //设置键
