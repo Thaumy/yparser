@@ -22,8 +22,9 @@ set(e1 ${ef}/yparser_error.h ${ef}/yparser_error.cpp)
 set(e2 ${ef}/derived/list_key_parse_err.hpp ${ef}/derived/list_value_parse_err.hpp)
 set(e3 ${ef}/derived/map_key_parse_err.hpp ${ef}/derived/map_value_parse_err.hpp)
 set(e4 ${ef}/derived/scalar_key_parse_err.hpp ${ef}/derived/scalar_value_parse_err.hpp)
-set(e5 ${ef}/derived/root_parse_err.hpp)
-set(exceptions ${e1} ${e2} ${e3} ${e4} ${e5})
+set(e5 ${ef}/derived/unknown_type_err.hpp)
+set(e6 ${ef}/derived/unexpected_type_err.hpp)
+set(exceptions ${e1} ${e2} ${e3} ${e4} ${e5} ${e6})
 
 set(coms ${functions} ${exceptions})
 
@@ -38,4 +39,3 @@ link_libraries(easyio)
 link_libraries(openssl libcrypto libssl)
 
 add_library(yparser STATIC ${coms})
-

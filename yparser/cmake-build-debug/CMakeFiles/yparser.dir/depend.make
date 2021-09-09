@@ -646,9 +646,10 @@ CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/exception/deriv
 CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/exception/derived/list_value_parse_err.hpp
 CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/exception/derived/map_key_parse_err.hpp
 CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/exception/derived/map_value_parse_err.hpp
-CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/exception/derived/root_parse_err.hpp
 CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/exception/derived/scalar_key_parse_err.hpp
 CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/exception/derived/scalar_value_parse_err.hpp
+CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/exception/derived/unexpected_type_err.hpp
+CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/exception/derived/unknown_type_err.hpp
 CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/exception/yparser_error.h
 CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/globalheaders.h
 CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/interface/interface.hpp
@@ -657,6 +658,7 @@ CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/parser/parser.h
 CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/type/YmlRaw.h
 CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/type/derived/YmlList.h
 CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/type/derived/YmlMap.h
+CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/type/derived/YmlRoot.h
 CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/type/derived/YmlScalar.h
 CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: ../include/util/util.h
 
@@ -1302,9 +1304,10 @@ CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj: ../include/exception/derived
 CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj: ../include/exception/derived/list_value_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj: ../include/exception/derived/map_key_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj: ../include/exception/derived/map_value_parse_err.hpp
-CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj: ../include/exception/derived/root_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj: ../include/exception/derived/scalar_key_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj: ../include/exception/derived/scalar_value_parse_err.hpp
+CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj: ../include/exception/derived/unexpected_type_err.hpp
+CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj: ../include/exception/derived/unknown_type_err.hpp
 CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj: ../include/exception/yparser_error.h
 CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj: ../include/globalheaders.h
 CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj: ../include/interface/interface.hpp
@@ -1954,16 +1957,19 @@ CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/exceptio
 CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/exception/derived/list_value_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/exception/derived/map_key_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/exception/derived/map_value_parse_err.hpp
-CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/exception/derived/root_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/exception/derived/scalar_key_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/exception/derived/scalar_value_parse_err.hpp
+CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/exception/derived/unexpected_type_err.hpp
+CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/exception/derived/unknown_type_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/exception/yparser_error.h
 CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/globalheaders.h
 CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/interface/interface.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/type/YmlRaw.h
 CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/type/derived/YmlList.cpp
 CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/type/derived/YmlList.h
+CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/type/derived/YmlMap.h
 CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/type/derived/YmlRoot.h
+CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/type/derived/YmlScalar.h
 CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: ../include/util/util.h
 
 CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../../easyio/easyio.h
@@ -2608,15 +2614,19 @@ CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/exception
 CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/exception/derived/list_value_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/exception/derived/map_key_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/exception/derived/map_value_parse_err.hpp
-CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/exception/derived/root_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/exception/derived/scalar_key_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/exception/derived/scalar_value_parse_err.hpp
+CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/exception/derived/unexpected_type_err.hpp
+CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/exception/derived/unknown_type_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/exception/yparser_error.h
 CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/globalheaders.h
 CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/interface/interface.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/type/YmlRaw.h
+CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/type/derived/YmlList.h
 CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/type/derived/YmlMap.cpp
 CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/type/derived/YmlMap.h
+CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/type/derived/YmlRoot.h
+CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/type/derived/YmlScalar.h
 CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: ../include/util/util.h
 
 CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../../easyio/easyio.h
@@ -3261,15 +3271,19 @@ CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/exceptio
 CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/exception/derived/list_value_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/exception/derived/map_key_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/exception/derived/map_value_parse_err.hpp
-CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/exception/derived/root_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/exception/derived/scalar_key_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/exception/derived/scalar_value_parse_err.hpp
+CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/exception/derived/unexpected_type_err.hpp
+CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/exception/derived/unknown_type_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/exception/yparser_error.h
 CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/globalheaders.h
 CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/interface/interface.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/type/YmlRaw.h
+CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/type/derived/YmlList.h
+CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/type/derived/YmlMap.h
 CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/type/derived/YmlRoot.cpp
 CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/type/derived/YmlRoot.h
+CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/type/derived/YmlScalar.h
 CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: ../include/util/util.h
 
 CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj: ../../easyio/easyio.h
@@ -3914,9 +3928,10 @@ CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj: ../include/except
 CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj: ../include/exception/derived/list_value_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj: ../include/exception/derived/map_key_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj: ../include/exception/derived/map_value_parse_err.hpp
-CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj: ../include/exception/derived/root_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj: ../include/exception/derived/scalar_key_parse_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj: ../include/exception/derived/scalar_value_parse_err.hpp
+CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj: ../include/exception/derived/unexpected_type_err.hpp
+CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj: ../include/exception/derived/unknown_type_err.hpp
 CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj: ../include/exception/yparser_error.h
 CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj: ../include/globalheaders.h
 CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj: ../include/interface/interface.hpp
@@ -4567,9 +4582,10 @@ CMakeFiles/yparser.dir/include/util/util.cpp.obj: ../include/exception/derived/l
 CMakeFiles/yparser.dir/include/util/util.cpp.obj: ../include/exception/derived/list_value_parse_err.hpp
 CMakeFiles/yparser.dir/include/util/util.cpp.obj: ../include/exception/derived/map_key_parse_err.hpp
 CMakeFiles/yparser.dir/include/util/util.cpp.obj: ../include/exception/derived/map_value_parse_err.hpp
-CMakeFiles/yparser.dir/include/util/util.cpp.obj: ../include/exception/derived/root_parse_err.hpp
 CMakeFiles/yparser.dir/include/util/util.cpp.obj: ../include/exception/derived/scalar_key_parse_err.hpp
 CMakeFiles/yparser.dir/include/util/util.cpp.obj: ../include/exception/derived/scalar_value_parse_err.hpp
+CMakeFiles/yparser.dir/include/util/util.cpp.obj: ../include/exception/derived/unexpected_type_err.hpp
+CMakeFiles/yparser.dir/include/util/util.cpp.obj: ../include/exception/derived/unknown_type_err.hpp
 CMakeFiles/yparser.dir/include/util/util.cpp.obj: ../include/exception/yparser_error.h
 CMakeFiles/yparser.dir/include/util/util.cpp.obj: ../include/globalheaders.h
 CMakeFiles/yparser.dir/include/util/util.cpp.obj: ../include/util/util.cpp

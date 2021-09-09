@@ -3,7 +3,6 @@
 //
 
 #include "YmlList.h"
-#include "YmlRoot.h"
 
 #define regSS util::reg::singleSearch
 #define regMS util::reg::multiSearch
@@ -75,8 +74,9 @@ string Self::serialize() {
     return result;
 }
 
-void Self::complie() {
+Self Self::complie() {
     raw = serialize();
+    return *this;
 }
 
 Self Self::with(const YmlRaw &ymlRaw) {
@@ -92,7 +92,17 @@ void Self::setKey(const string &newKey) {
 }
 
 void Self::addElement(const YmlRaw &element) {
-    this->elements.emplace_back(element);
+    //编译后添加到元素列表
+    if (typeid(element) == typeid(YmlMap))
+        elements.emplace_back(((YmlMap &&) element).complie());
+    else if (typeid(element) == typeid(YmlList))
+        elements.emplace_back(((YmlList &&) element).complie());
+    else if (typeid(element) == typeid(YmlRoot))
+        elements.emplace_back(((YmlRoot &&) element).complie());
+    else if (typeid(element) == typeid(YmlScalar))
+        elements.emplace_back(((YmlScalar &&) element));
+    else//is text
+        elements.emplace_back(YmlRaw(element));
 }
 
 vector<yparser::YmlRaw> Self::getElements() {

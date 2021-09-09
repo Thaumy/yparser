@@ -23,7 +23,7 @@ Self::YmlRoot(const string &yml) : YmlRaw(yml, root) {
         else if (YmlRaw::isScalar(el))
             elements.emplace_back(YmlRaw(el, YmlRaw::Type::scalar));
         else//无法解析的元素类型，聚合根不能包含text或root
-            throw root_parse_err("unknown element type:" + el);
+            throw unknown_type_err("unknown element type when parsing root:\n" + el);
     }
 }
 
@@ -39,8 +39,9 @@ string Self::serialize() {
     return result;
 }
 
-void Self::complie() {
+Self Self::complie() {
     raw = serialize();
+    return *this;
 }
 
 vector<yparser::YmlRaw> Self::getElements() {
@@ -48,7 +49,21 @@ vector<yparser::YmlRaw> Self::getElements() {
 }
 
 void Self::addElement(const yparser::YmlRaw &element) {
-    this->elements.emplace_back(element);
+    //编译后添加到元素列表
+    if (typeid(element) == typeid(YmlMap))
+        elements.emplace_back(((YmlMap &&) element).complie());
+    else if (typeid(element) == typeid(YmlList))
+        elements.emplace_back(((YmlList &&) element).complie());
+    else if (typeid(element) == typeid(YmlScalar))
+        elements.emplace_back(((YmlScalar &&) element));
+    else if (typeid(element) == typeid(YmlRoot))//YmlRoot里不能添加YmlRoot
+        throw unexpected_type_err
+                ("can't adding YmlRoot into YmlRoot:\n"
+                 + element.toString());
+    else
+        throw unknown_type_err
+                ("unknown type when adding element into YmlRoot:\n"
+                 + element.toString());
 }
 
 Self Self::with(const yparser::YmlRaw &ymlRaw) {

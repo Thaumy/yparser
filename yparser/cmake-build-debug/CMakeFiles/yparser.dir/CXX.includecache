@@ -5962,11 +5962,13 @@ H:/proj/cpp/yparser proj/yparser/include/exception/derived/map_key_parse_err.hpp
 
 H:/proj/cpp/yparser proj/yparser/include/exception/derived/map_value_parse_err.hpp
 
-H:/proj/cpp/yparser proj/yparser/include/exception/derived/root_parse_err.hpp
-
 H:/proj/cpp/yparser proj/yparser/include/exception/derived/scalar_key_parse_err.hpp
 
 H:/proj/cpp/yparser proj/yparser/include/exception/derived/scalar_value_parse_err.hpp
+
+H:/proj/cpp/yparser proj/yparser/include/exception/derived/unexpected_type_err.hpp
+
+H:/proj/cpp/yparser proj/yparser/include/exception/derived/unknown_type_err.hpp
 
 H:/proj/cpp/yparser proj/yparser/include/exception/yparser_error.h
 exception
@@ -6007,8 +6009,10 @@ exception/derived/scalar_key_parse_err.hpp
 H:/proj/cpp/yparser proj/yparser/include/exception/derived/scalar_key_parse_err.hpp
 exception/derived/scalar_value_parse_err.hpp
 H:/proj/cpp/yparser proj/yparser/include/exception/derived/scalar_value_parse_err.hpp
-exception/derived/root_parse_err.hpp
-H:/proj/cpp/yparser proj/yparser/include/exception/derived/root_parse_err.hpp
+exception/derived/unknown_type_err.hpp
+H:/proj/cpp/yparser proj/yparser/include/exception/derived/unknown_type_err.hpp
+exception/derived/unexpected_type_err.hpp
+H:/proj/cpp/yparser proj/yparser/include/exception/derived/unexpected_type_err.hpp
 
 H:/proj/cpp/yparser proj/yparser/include/interface/interface.hpp
 ../globalheaders.h
@@ -6036,6 +6040,12 @@ H:/proj/cpp/yparser proj/yparser/include/interface/interface.hpp
 ../util/util.h
 H:/proj/cpp/yparser proj/yparser/include/util/util.h
 
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlList.cpp
+YmlList.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlList.h
+YmlRoot.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.h
+
 H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlList.h
 ../../globalheaders.h
 H:/proj/cpp/yparser proj/yparser/include/globalheaders.h
@@ -6045,6 +6055,18 @@ H:/proj/cpp/yparser proj/yparser/include/interface/interface.hpp
 H:/proj/cpp/yparser proj/yparser/include/exception/yparser_error.h
 ../YmlRaw.h
 H:/proj/cpp/yparser proj/yparser/include/type/YmlRaw.h
+../derived/YmlMap.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlMap.h
+../derived/YmlList.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlList.h
+../derived/YmlRoot.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.h
+../derived/YmlScalar.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlScalar.h
+
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlMap.cpp
+YmlMap.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlMap.h
 
 H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlMap.h
 ../../globalheaders.h
@@ -6053,6 +6075,34 @@ H:/proj/cpp/yparser proj/yparser/include/globalheaders.h
 H:/proj/cpp/yparser proj/yparser/include/interface/interface.hpp
 ../YmlRaw.h
 H:/proj/cpp/yparser proj/yparser/include/type/YmlRaw.h
+../derived/YmlMap.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlMap.h
+../derived/YmlList.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlList.h
+../derived/YmlRoot.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.h
+../derived/YmlScalar.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlScalar.h
+
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.cpp
+YmlRoot.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.h
+
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.h
+../../globalheaders.h
+H:/proj/cpp/yparser proj/yparser/include/globalheaders.h
+../../interface/interface.hpp
+H:/proj/cpp/yparser proj/yparser/include/interface/interface.hpp
+../YmlRaw.h
+H:/proj/cpp/yparser proj/yparser/include/type/YmlRaw.h
+../derived/YmlMap.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlMap.h
+../derived/YmlList.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlList.h
+../derived/YmlRoot.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.h
+../derived/YmlScalar.h
+H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlScalar.h
 
 H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlScalar.h
 ../../globalheaders.h

@@ -8,6 +8,10 @@
 #include "../../globalheaders.h"
 #include "../../interface/interface.hpp"
 #include "../YmlRaw.h"
+#include "../derived/YmlMap.h"
+#include "../derived/YmlList.h"
+#include "../derived/YmlRoot.h"
+#include "../derived/YmlScalar.h"
 
 
 namespace yparser {
@@ -23,7 +27,7 @@ namespace yparser {
         string serialize();
 
         //编译表达式
-        void complie();
+        YmlMap complie();
 
     public:
         //将YmlRaw转换为YmlMap
@@ -44,6 +48,9 @@ namespace yparser {
 
     private:
         map<string, YmlRaw> elements;
+
+        //使用yml构造，禁止初始化
+        //YmlMap(const string &yml, bool &noInit = true);
     };
 }
 

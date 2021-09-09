@@ -6,9 +6,10 @@ CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/list_k
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/list_value_parse_err.hpp
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/map_key_parse_err.hpp
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/map_value_parse_err.hpp
-CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/root_parse_err.hpp
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/scalar_key_parse_err.hpp
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/scalar_value_parse_err.hpp
+CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/unexpected_type_err.hpp
+CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/derived/unknown_type_err.hpp
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/exception/yparser_error.h
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/globalheaders.h
 CMakeFiles/demo.dir/main.cpp.obj: ../../yparser/include/interface/interface.hpp

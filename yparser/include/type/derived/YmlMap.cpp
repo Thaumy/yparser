@@ -71,8 +71,9 @@ string Self::serialize() {
     return result;
 }
 
-void Self::complie() {
+Self Self::complie() {
     raw = serialize();
+    return *this;
 }
 
 Self Self::with(const YmlRaw &ymlRaw) {
@@ -88,8 +89,21 @@ void Self::setKey(const string &key) {
 }
 
 void Self::addElement(const string &key, const yparser::YmlRaw &value) {
-    auto el = pair<string, YmlRaw>(key, value);
-    this->elements.insert(el);
+    //编译后添加到元素列表
+    if (typeid(value) == typeid(YmlMap))
+        elements.insert(pair<string, YmlRaw>(key, ((YmlMap &&) value).complie()));
+    else if (typeid(value) == typeid(YmlList))
+        elements.insert(pair<string, YmlRaw>(key, ((YmlList &&) value).complie()));
+    else if (typeid(value) == typeid(YmlScalar))
+        elements.insert(pair<string, YmlRaw>(key, (YmlScalar &&) value));
+    else if (typeid(value) == typeid(YmlRoot))//YmlMap里不能添加YmlRoot
+        throw unexpected_type_err
+                ("can't adding YmlRoot into YmlMap:\n"
+                 + value.toString());
+    else
+        throw unknown_type_err
+                ("unknown type when adding element into YmlMap:\n"
+                 + value.toString());
 }
 
 yparser::YmlRaw Self::getElementValue(const string &key) {
@@ -98,7 +112,7 @@ yparser::YmlRaw Self::getElementValue(const string &key) {
 
 vector<yparser::YmlRaw> Self::getElementValues() {
     vector<YmlRaw> values;
-    for (auto el:this->elements) {
+    for (const auto &el:this->elements) {
         values.emplace_back(el.second);
     }
     return values;

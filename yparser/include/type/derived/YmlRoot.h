@@ -8,6 +8,10 @@
 #include "../../globalheaders.h"
 #include "../../interface/interface.hpp"
 #include "../YmlRaw.h"
+#include "../derived/YmlMap.h"
+#include "../derived/YmlList.h"
+#include "../derived/YmlRoot.h"
+#include "../derived/YmlScalar.h"
 
 
 namespace yparser {
@@ -23,7 +27,7 @@ namespace yparser {
         string serialize();
 
         //编译表达式
-        void complie();
+        YmlRoot complie();
 
     public:
         //将YmlRaw转换为YmlRoot
@@ -38,6 +42,5 @@ namespace yparser {
         vector<YmlRaw> elements;
     };
 }
-
 
 #endif //INCLUDE_YMLROOT_H

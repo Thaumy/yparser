@@ -9,6 +9,10 @@
 #include "../../interface/interface.hpp"
 #include "../../exception/yparser_error.h"
 #include "../YmlRaw.h"
+#include "../derived/YmlMap.h"
+#include "../derived/YmlList.h"
+#include "../derived/YmlRoot.h"
+#include "../derived/YmlScalar.h"
 
 
 namespace yparser {
@@ -24,7 +28,7 @@ namespace yparser {
         string serialize();
 
         //编译表达式
-        void complie();
+        YmlList complie();
 
     public:
         //设置键
@@ -38,10 +42,13 @@ namespace yparser {
 
     public:
         //将YmlRaw转换为YmlList
-        static YmlList with(const YmlRaw &);//TODO 考虑接口化
+        static YmlList with(const YmlRaw &);
 
     private:
         vector<YmlRaw> elements;
+
+        //使用yml构造，禁止初始化
+        //YmlList(const string &yml, bool &noInit = true);
     };
 }
 
