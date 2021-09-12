@@ -15,7 +15,7 @@ Self::YmlRoot(const string &yml) : YmlRaw(yml, root) {
     auto results = util::reg::multiSearch//与parser用的表达式相同
             (yml, R"(^\w+:[\n ](((  )+[^\n]+\n*)+(?=\n|$)|[^\n]+))");//perl syntax
 
-    for (const auto &el:results) {
+    for (const auto &el: results) {
         if (YmlRaw::isMap(el))
             elements.emplace_back(YmlRaw(el, YmlRaw::Type::mapping));
         else if (YmlRaw::isList(el))
@@ -27,10 +27,10 @@ Self::YmlRoot(const string &yml) : YmlRaw(yml, root) {
     }
 }
 
-string Self::serialize() {
+string Self::serialize() const {
     ostringstream serialized;//提高拼接效率
 
-    for (const auto &el:elements) {
+    for (const auto &el: elements) {
         serialized << el.toString() << "\n";//最后会产生空行
     }
 
@@ -48,7 +48,7 @@ vector<yparser::YmlRaw> Self::getElements() {
     return elements;
 }
 
-void Self::addElement(const yparser::YmlRaw &element) {
+void Self::add(const yparser::YmlRaw &element) {
     //编译后添加到元素列表
     if (typeid(element) == typeid(YmlMap))
         elements.emplace_back(((YmlMap &&) element).complie());

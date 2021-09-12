@@ -38,7 +38,7 @@ Self::YmlList(const string &yml) : YmlRaw(yml, list) {
         auto result = regMS
                 (this->getValue(), R"(^- ?([^\n]+|\n(?:(?:  )+[^\n]+\n*)+(?=\n|$)))", 1);//perl syntax
         if (!result.empty()) {
-            for (auto el:result) {
+            for (auto el: result) {
                 util::yml::decIndentation(el);
                 if (isRoot(el)) {//只有在List的情况下才可能产生聚合根
                     YmlRoot root_el(el);
@@ -52,12 +52,12 @@ Self::YmlList(const string &yml) : YmlRaw(yml, list) {
     }
 }
 
-string Self::serialize() {
+string Self::serialize() const {
     ostringstream serialized;//提高拼接效率
     serialized << getKey() << ":\n";
 
     using namespace util::yml;
-    for (const auto &el:elements) {
+    for (const auto &el: elements) {
         auto el_string = el.toString();
         if (isSingleLine(el_string))
             serialized << "  - " << el_string << "\n";//最后会产生空行
@@ -91,7 +91,7 @@ void Self::setKey(const string &newKey) {
     IKeyValueTangible::setKey(newKey);
 }
 
-void Self::addElement(const YmlRaw &element) {
+void Self::add(const YmlRaw &element) {
     //编译后添加到元素列表
     if (typeid(element) == typeid(YmlMap))
         elements.emplace_back(((YmlMap &&) element).complie());

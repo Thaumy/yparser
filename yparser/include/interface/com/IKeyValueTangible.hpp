@@ -1,11 +1,11 @@
 //
-// Created by Thaumy on 2021/9/4.
+// Created by Thaumy on 2021/9/12.
 //
 
-#ifndef INCLUDE_INTERFACE_HPP
-#define INCLUDE_INTERFACE_HPP
+#ifndef INCLUDE_IKEYVALUETANGIBLE_HPP
+#define INCLUDE_IKEYVALUETANGIBLE_HPP
 
-#include "../globalheaders.h"
+#include "../../globalheaders.h"
 
 
 namespace interface {
@@ -30,20 +30,6 @@ namespace interface {
         K key;
         V value;
     };
-
-    //可哈希接口
-    class IHashable {
-    public:
-        //转SHA256
-        virtual string SHA256() const = 0;
-    };
-
-    //可字符串接口
-    class IStringable {
-    public:
-        //转字符串
-        virtual string toString() const = 0;
-    };
 }
 
-#endif //INCLUDE_INTERFACE_HPP
+#endif //INCLUDE_IKEYVALUETANGIBLE_HPP

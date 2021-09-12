@@ -1,16 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "H:\proj\cpp\yparser proj\yparser"
+"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" "H:\proj\cpp\yparser proj\yparser"
 -- Configuring done
-CMake Error at CMakeLists.txt:41 (add_library):
-  Cannot find source file:
-
-    include/exception/derived/unexpected_type_err.hpp
-
-  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
-  .hpp .hxx .in .txx
-
-
-CMake Error at CMakeLists.txt:41 (add_library):
-  No SOURCES given to target: yparser
-
-
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+-- Generating done
+-- Build files have been written to: H:/proj/cpp/yparser proj/yparser/cmake-build-debug

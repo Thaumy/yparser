@@ -78,9 +78,37 @@ exception/derived/unknown_type_err.hpp
 exception/derived/unexpected_type_err.hpp
 ../../yparser/include/exception/derived/unexpected_type_err.hpp
 
-../../yparser/include/interface/interface.hpp
-../globalheaders.h
+../../yparser/include/interface/com/IHashable.hpp
+../../globalheaders.h
 ../../yparser/include/globalheaders.h
+
+../../yparser/include/interface/com/IKeyValueTangible.hpp
+../../globalheaders.h
+../../yparser/include/globalheaders.h
+
+../../yparser/include/interface/com/ISerializable.hpp
+../../globalheaders.h
+../../yparser/include/globalheaders.h
+
+../../yparser/include/interface/com/IStreamable.hpp
+../../globalheaders.h
+../../yparser/include/globalheaders.h
+
+../../yparser/include/interface/com/IStringable.hpp
+../../globalheaders.h
+../../yparser/include/globalheaders.h
+
+../../yparser/include/interface/interface.h
+com/IHashable.hpp
+../../yparser/include/interface/com/IHashable.hpp
+com/IKeyValueTangible.hpp
+../../yparser/include/interface/com/IKeyValueTangible.hpp
+com/ISerializable.hpp
+../../yparser/include/interface/com/ISerializable.hpp
+com/IStreamable.hpp
+../../yparser/include/interface/com/IStreamable.hpp
+com/IStringable.hpp
+../../yparser/include/interface/com/IStringable.hpp
 
 ../../yparser/include/parser/parser.h
 ../type/YmlRaw.h
@@ -95,18 +123,12 @@ exception/derived/unexpected_type_err.hpp
 ../../yparser/include/type/YmlRaw.h
 ../globalheaders.h
 ../../yparser/include/globalheaders.h
-../interface/interface.hpp
-../../yparser/include/interface/interface.hpp
+../interface/interface.h
+../../yparser/include/interface/interface.h
 ../util/util.h
 ../../yparser/include/util/util.h
 
 ../../yparser/include/type/derived/YmlList.h
-../../globalheaders.h
-../../yparser/include/globalheaders.h
-../../interface/interface.hpp
-../../yparser/include/interface/interface.hpp
-../../exception/yparser_error.h
-../../yparser/include/exception/yparser_error.h
 ../YmlRaw.h
 ../../yparser/include/type/YmlRaw.h
 ../derived/YmlMap.h
@@ -119,10 +141,6 @@ exception/derived/unexpected_type_err.hpp
 ../../yparser/include/type/derived/YmlScalar.h
 
 ../../yparser/include/type/derived/YmlMap.h
-../../globalheaders.h
-../../yparser/include/globalheaders.h
-../../interface/interface.hpp
-../../yparser/include/interface/interface.hpp
 ../YmlRaw.h
 ../../yparser/include/type/YmlRaw.h
 ../derived/YmlMap.h
@@ -135,10 +153,6 @@ exception/derived/unexpected_type_err.hpp
 ../../yparser/include/type/derived/YmlScalar.h
 
 ../../yparser/include/type/derived/YmlRoot.h
-../../globalheaders.h
-../../yparser/include/globalheaders.h
-../../interface/interface.hpp
-../../yparser/include/interface/interface.hpp
 ../YmlRaw.h
 ../../yparser/include/type/YmlRaw.h
 ../derived/YmlMap.h
@@ -151,10 +165,6 @@ exception/derived/unexpected_type_err.hpp
 ../../yparser/include/type/derived/YmlScalar.h
 
 ../../yparser/include/type/derived/YmlScalar.h
-../../globalheaders.h
-../../yparser/include/globalheaders.h
-../../interface/interface.hpp
-../../yparser/include/interface/interface.hpp
 ../YmlRaw.h
 ../../yparser/include/type/YmlRaw.h
 
@@ -163,8 +173,8 @@ exception/derived/unexpected_type_err.hpp
 ../../yparser/include/globalheaders.h
 
 ../../yparser/include/yparser.h
-interface/interface.hpp
-../../yparser/include/interface/interface.hpp
+interface/interface.h
+../../yparser/include/interface/interface.h
 parser/parser.h
 ../../yparser/include/parser/parser.h
 util/util.h

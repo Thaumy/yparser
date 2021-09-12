@@ -10,7 +10,7 @@ using namespace std;
 
 int main() {
     //parse_test();;
-    serialize_test();;
+    serialize_test();
 
     return 0;
 }

@@ -22,37 +22,37 @@ void serialize_test() {
             YmlMap Joe;
             Joe.setKey("Joe");
             {
-                Joe.addElement("phone", YmlScalar("phone", "1951327599"));
-                Joe.addElement("message", YmlScalar("message", "thaumy12384"));
+                Joe.add("phone", YmlScalar("phone", "1951327599"));
+                Joe.add("message", YmlScalar("message", "thaumy12384"));
                 {
                     YmlList favorNumbers;
                     favorNumbers.setKey("favorNumbers");
-                    favorNumbers.addElement(YmlRaw("114"));
-                    favorNumbers.addElement(YmlRaw("514"));
-                    favorNumbers.addElement(YmlRaw("000"));
-                    Joe.addElement("favorNumbers", favorNumbers);
+                    favorNumbers.add(YmlRaw("114"));
+                    favorNumbers.add(YmlRaw("514"));
+                    favorNumbers.add(YmlRaw("000"));
+                    Joe.add("favorNumbers", favorNumbers);
                 }
             }
             YmlMap Alice;
             Alice.setKey("Alice");
             {
-                Alice.addElement("message", YmlScalar("message", "good"));
+                Alice.add("message", YmlScalar("message", "good"));
                 {
                     YmlMap nekos;
                     nekos.setKey("nekos");
-                    nekos.addElement("cat1", YmlScalar("cat1", "jbcat"));
-                    nekos.addElement("cat2", YmlScalar("cat2", "ooo"));
-                    Alice.addElement("nekos", nekos);
+                    nekos.add("cat1", YmlScalar("cat1", "jbcat"));
+                    nekos.add("cat2", YmlScalar("cat2", "ooo"));
+                    Alice.add("nekos", nekos);
                 }
             }
 
-            students.addElement("Alice", Alice);
-            students.addElement("Joe", Joe);
+            students.add("Alice", Alice);
+            students.add("Joe", Joe);
         }
         YmlMap AwesomeSite;
         AwesomeSite.setKey("AwesomeSite");
         {
-            AwesomeSite.addElement("url", YmlScalar("url", "http://cdn.thaumy.cn/"));
+            AwesomeSite.add("url", YmlScalar("url", "http://cdn.thaumy.cn/"));
         }
         YmlList Goods;
         Goods.setKey("Goods");
@@ -62,30 +62,30 @@ void serialize_test() {
             {
                 YmlRoot root;
                 {
-                    root.addElement(YmlScalar("co", "apple"));
-                    root.addElement(YmlScalar("keyborad", "qwert"));
+                    root.add(YmlScalar("co", "apple"));
+                    root.add(YmlScalar("keyborad", "qwert"));
                 }
-                fruits.addElement(root);
-                fruits.addElement(YmlRaw("banana"));
-                fruits.addElement(YmlRaw("cherry"));
+                fruits.add(root);
+                fruits.add(YmlRaw("banana"));
+                fruits.add(YmlRaw("cherry"));
             }
-            Goods.addElement(fruits);
-            Goods.addElement(YmlScalar("id1", "1"));
-            Goods.addElement(YmlRaw("hybrid"));
+            Goods.add(fruits);
+            Goods.add(YmlScalar("id1", "1"));
+            Goods.add(YmlRaw("hybrid"));
         }
         YmlList List;
         List.setKey("List");
         {
-            List.addElement(YmlRaw("12384"));
+            List.add(YmlRaw("12384"));
         }
 
-        ymlroot.addElement(hola);
-        ymlroot.addElement(sekai);
-        ymlroot.addElement(students);
-        ymlroot.addElement(AwesomeSite);
-        ymlroot.addElement(Goods);
-        ymlroot.addElement(List);
+        ymlroot.add(hola);
+        ymlroot.add(sekai);
+        ymlroot.add(students);
+        ymlroot.add(AwesomeSite);
+        ymlroot.add(Goods);
+        ymlroot.add(List);
     }
 
-    cout << ymlroot.serialize();
+    cout << ymlroot;
 }

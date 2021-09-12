@@ -38,7 +38,7 @@ Self::YmlScalar(const string &yml) : YmlRaw(yml, scalar) {
     }
 }
 
-string Self::serialize() {
+string Self::serialize() const {
     return getKey() + ": " + getValue();
 }
 

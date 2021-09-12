@@ -55,11 +55,11 @@ Self::YmlMap(const string &yml) : YmlRaw(yml, mapping) {
     }
 }
 
-string Self::serialize() {
+string Self::serialize() const {
     ostringstream serialized;//提高拼接效率
     serialized << getKey() << ":\n";
 
-    for (const auto &el:elements) {
+    for (const auto &el: elements) {
         auto el_string = el.second.toString();
         util::yml::incIndentation(el_string);
 
@@ -88,7 +88,7 @@ void Self::setKey(const string &key) {
     IKeyValueTangible::setKey(key);
 }
 
-void Self::addElement(const string &key, const yparser::YmlRaw &value) {
+void Self::add(const string &key, const yparser::YmlRaw &value) {
     //编译后添加到元素列表
     if (typeid(value) == typeid(YmlMap))
         elements.insert(pair<string, YmlRaw>(key, ((YmlMap &&) value).complie()));
@@ -112,7 +112,7 @@ yparser::YmlRaw Self::getElementValue(const string &key) {
 
 vector<yparser::YmlRaw> Self::getElementValues() {
     vector<YmlRaw> values;
-    for (const auto &el:this->elements) {
+    for (const auto &el: this->elements) {
         values.emplace_back(el.second);
     }
     return values;

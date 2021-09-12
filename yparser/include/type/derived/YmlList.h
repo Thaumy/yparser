@@ -5,9 +5,6 @@
 #ifndef YPARSER_YMLLIST_H
 #define YPARSER_YMLLIST_H
 
-#include "../../globalheaders.h"
-#include "../../interface/interface.hpp"
-#include "../../exception/yparser_error.h"
 #include "../YmlRaw.h"
 #include "../derived/YmlMap.h"
 #include "../derived/YmlList.h"
@@ -17,7 +14,10 @@
 
 namespace yparser {
     //yml列表
-    class YmlList : public YmlRaw, public IKeyValueTangible<string, string> {
+    class YmlList :
+            public YmlRaw,
+            public IStreamable,
+            public IKeyValueTangible<string, string> {
     public:
         YmlList();//由于C++不支持程序集访问级别，故此处不使用键构造
 
@@ -25,7 +25,7 @@ namespace yparser {
         explicit YmlList(const string &yml);
 
         //序列化到字符串
-        string serialize();
+        string serialize() const override;
 
         //编译表达式
         YmlList complie();
@@ -35,7 +35,7 @@ namespace yparser {
         void setKey(const string &newKey) override;
 
         //添加元素
-        void addElement(const YmlRaw &element);
+        void add(const YmlRaw &element);
 
         //取元素表
         vector<YmlRaw> getElements();

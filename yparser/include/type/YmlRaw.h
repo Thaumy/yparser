@@ -6,7 +6,7 @@
 #define YPARSER_YMLRAW_H
 
 #include "../globalheaders.h"
-#include "../interface/interface.hpp"
+#include "../interface/interface.h"
 #include "../util/util.h"
 
 

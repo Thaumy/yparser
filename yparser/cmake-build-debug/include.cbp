@@ -119,7 +119,22 @@
 		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/globalheaders.h">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/interface/interface.hpp">
+		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/interface/com/IHashable.hpp">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/interface/com/IKeyValueTangible.hpp">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/interface/com/ISerializable.hpp">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/interface/com/IStreamable.hpp">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/interface/com/IStringable.hpp">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/interface/interface.h">
 			<Option target="yparser"/>
 		</Unit>
 		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/parser/parser.cpp">

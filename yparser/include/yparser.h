@@ -2,7 +2,7 @@
 #define YPARSER_YPARSER_H
 
 //...
-#include "interface/interface.hpp"
+#include "interface/interface.h"
 #include "parser/parser.h"
 #include "util/util.h"
 

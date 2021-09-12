@@ -5,8 +5,6 @@
 #ifndef YPARSER_YMLMAP_H
 #define YPARSER_YMLMAP_H
 
-#include "../../globalheaders.h"
-#include "../../interface/interface.hpp"
 #include "../YmlRaw.h"
 #include "../derived/YmlMap.h"
 #include "../derived/YmlList.h"
@@ -16,7 +14,10 @@
 
 namespace yparser {
     //yml映射
-    class YmlMap : public YmlRaw, public IKeyValueTangible<string, string> {
+    class YmlMap :
+            public YmlRaw,
+            public IStreamable,
+            public IKeyValueTangible<string, string> {
     public:
         YmlMap();//由于C++不支持程序集访问级别，故此处不使用键构造
 
@@ -24,7 +25,7 @@ namespace yparser {
         explicit YmlMap(const string &yml);
 
         //序列化到字符串
-        string serialize();
+        string serialize() const override;
 
         //编译表达式
         YmlMap complie();
@@ -38,7 +39,7 @@ namespace yparser {
         void setKey(const string &key) override;
 
         //添加元素
-        void addElement(const string &key, const YmlRaw &value);
+        void add(const string &key, const YmlRaw &value);
 
         //取得元素
         YmlRaw getElementValue(const string &key);

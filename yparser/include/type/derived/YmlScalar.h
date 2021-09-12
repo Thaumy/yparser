@@ -5,14 +5,15 @@
 #ifndef YPARSER_YMLSCALAR_H
 #define YPARSER_YMLSCALAR_H
 
-#include "../../globalheaders.h"
-#include "../../interface/interface.hpp"
 #include "../YmlRaw.h"
 
 
 namespace yparser {
     //yml纯量
-    class YmlScalar : public YmlRaw, public IKeyValueTangible<string, string> {
+    class YmlScalar :
+            public YmlRaw,
+            public IStreamable,
+            public IKeyValueTangible<string, string> {
     public:
         //使用键值对构造
         YmlScalar(const string &key, const string &value);
@@ -21,7 +22,7 @@ namespace yparser {
         explicit YmlScalar(const string &yml);
 
         //序列化到字符串
-        string serialize();
+        string serialize() const override;
 
     public:
         //TODO
