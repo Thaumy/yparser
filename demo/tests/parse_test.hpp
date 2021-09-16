@@ -13,7 +13,7 @@ using namespace easyio;
 using namespace yparser;
 
 void greedyParseAll(const vector<YmlRaw> &parsed) {
-    for (const auto &el:parsed) {
+    for (const auto &el: parsed) {
         cout << "SHA: " << el.SHA256() << endl;
         if (el.isMap()) {
             auto it = YmlMap::with(el);;

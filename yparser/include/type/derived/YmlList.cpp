@@ -14,11 +14,20 @@ Self::YmlList() : YmlRaw(
         "zero parameter constructor of YmlList",//标识到yml方便debug
         list) {}
 
-Self::YmlList(const string &yml) : YmlRaw(yml, list) {
+Self::YmlList(const string &ymlOrKey) : YmlRaw(ymlOrKey, list) {
+    {
+        const auto &key = ymlOrKey;
+        //如果是文本则当成键来解析
+        if (YmlRaw::getType(key) == text) {
+            IKeyValueTangible::setKey(key);
+            return;
+        }
+    }
+    const auto &yml = ymlOrKey;
     {//初始化key
         auto result = regSS(yml, R"((\w+):\n  -)", 1);
         if (!result.empty())
-            this->setKey(result);
+            IKeyValueTangible::setKey(result);
         else//无法解析key时报错
             throw list_key_parse_err
                     ("error occurred when parsing this:\n" + yml);

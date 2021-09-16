@@ -36,9 +36,14 @@ namespace yparser {
 
     public:
         //设置键
+        [[deprecated("Please use constructor to set key")]]
         void setKey(const string &key) override;
 
-        //添加元素
+        //添加元素，键从元素推断
+        void add(const YmlRaw &value);
+
+        //添加元素并显式指定键，已弃用
+        [[deprecated("Please use 'void add(const YmlRaw &value)'")]]
         void add(const string &key, const YmlRaw &value);
 
         //取得元素

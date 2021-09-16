@@ -22,7 +22,7 @@ namespace yparser {
         YmlList();//由于C++不支持程序集访问级别，故此处不使用键构造
 
         //使用yml构造
-        explicit YmlList(const string &yml);
+        explicit YmlList(const string &ymlOrKey);
 
         //序列化到字符串
         string serialize() const override;
@@ -32,6 +32,7 @@ namespace yparser {
 
     public:
         //设置键
+        [[deprecated("Please use constructor to set key")]]
         void setKey(const string &newKey) override;
 
         //添加元素

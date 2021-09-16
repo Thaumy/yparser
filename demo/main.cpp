@@ -3,7 +3,7 @@
 
 
 #include "tests/parse_test.hpp"
-#include "tests/serialize_test.hpp"
+#include "tests/serialize_test1.hpp"
 
 
 using namespace std;

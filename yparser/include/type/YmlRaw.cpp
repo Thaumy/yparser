@@ -17,7 +17,7 @@ string Self::SHA256() const {
 }
 
 string Self::toString() const {
-    return string(this->raw);
+    return this->raw;
 }
 
 //默认用户输入需要格式化，只有此构造才会调用格式化函数流水线

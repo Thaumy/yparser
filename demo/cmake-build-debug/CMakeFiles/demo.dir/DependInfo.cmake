@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "H:/proj/cpp/yparser proj/demo/main.cpp" "H:/proj/cpp/yparser proj/demo/cmake-build-debug/CMakeFiles/demo.dir/main.cpp.obj"
+  "F:/project/proj/cpp/yparser proj/demo/main.cpp" "F:/project/proj/cpp/yparser proj/demo/cmake-build-debug/CMakeFiles/demo.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

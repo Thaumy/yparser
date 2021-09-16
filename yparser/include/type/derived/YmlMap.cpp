@@ -14,12 +14,21 @@ Self::YmlMap() : YmlRaw(
         "zero parameter constructor of YmlMap",//标识到yml方便debug
         mapping) {}
 
-Self::YmlMap(const string &yml) : YmlRaw(yml, mapping) {
+Self::YmlMap(const string &ymlOrKey) : YmlRaw(ymlOrKey, mapping) {
+    {
+        const auto &key = ymlOrKey;
+        //如果是文本则当成键来解析
+        if (YmlRaw::getType(key) == text) {
+            IKeyValueTangible::setKey(key);
+            return;
+        }
+    }
+    const auto &yml = ymlOrKey;
     {//初始化key
         //regSS(yml, R"((?:^|\n)(\w+):(?: .+|\n)(?:(?:  )+.+\n*)*)", 1);
         auto result = regSS(yml, R"(\w+(?=:\n  \w))");//perl syntax
         if (!result.empty())
-            this->setKey(result);
+            IKeyValueTangible::setKey(result);
         else//无法解析key时报错
             throw map_key_parse_err
                     ("error occurred when parsing this:\n" + yml);
@@ -86,6 +95,27 @@ Self Self::with(const YmlRaw &ymlRaw) {
 
 void Self::setKey(const string &key) {
     IKeyValueTangible::setKey(key);
+}
+
+void Self::add(const yparser::YmlRaw &value) {
+    //编译后添加到元素列表
+    if (typeid(value) == typeid(YmlMap)) {
+        auto el = ((YmlMap &&) value).complie();
+        elements.insert(pair<string, YmlRaw>(el.getKey(), el));
+    } else if (typeid(value) == typeid(YmlList)) {
+        auto el = ((YmlList &&) value).complie();
+        elements.insert(pair<string, YmlRaw>(el.getKey(), el));
+    } else if (typeid(value) == typeid(YmlScalar)) {
+        auto el = (YmlScalar &&) value;
+        elements.insert(pair<string, YmlRaw>(el.getKey(), el));
+    } else if (typeid(value) == typeid(YmlRoot))//YmlMap里不能添加YmlRoot
+        throw unexpected_type_err
+                ("can't adding YmlRoot into YmlMap:\n"
+                 + value.toString());
+    else
+        throw unknown_type_err
+                ("unknown type when adding element into YmlMap:\n"
+                 + value.toString());
 }
 
 void Self::add(const string &key, const yparser::YmlRaw &value) {

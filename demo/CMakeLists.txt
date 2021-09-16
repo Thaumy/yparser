@@ -17,6 +17,6 @@ link_libraries(yparser)
 link_libraries(easyio)
 link_libraries(openssl libssl libcrypto)
 
-add_executable(demo main.cpp tests/parse_test.hpp tests/serialize_test.hpp)
+add_executable(demo main.cpp tests/parse_test.hpp tests/serialize_test1.hpp tests/serialize_test2.hpp)
 
 target_link_libraries(demo yparser easyio openssl libssl libcrypto)

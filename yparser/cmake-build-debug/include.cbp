@@ -8,23 +8,23 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="H:/proj/cpp/yparser proj/yparser/cmake-build-debug"/>
+				<Option working_dir="F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="yparser">
-				<Option output="H:/proj/cpp/yparser proj/yparser/cmake-build-debug/libyparser.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="H:/proj/cpp/yparser proj/yparser/cmake-build-debug"/>
+				<Option output="F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/libyparser.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="H:/proj/cpp/yparser proj/yparser/../easyio"/>
+					<Add directory="F:/project/proj/cpp/yparser proj/yparser/../easyio"/>
 					<Add directory="D:/app/OpenSSL-Win64/include"/>
 					<Add directory="C:/Boost/include/boost-1_77"/>
 					<Add directory="D:/app/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
@@ -35,20 +35,20 @@
 					<Add directory="D:/app/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 yparser"/>
-					<CompileFile command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 yparser"/>
+					<CompileFile command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="yparser/fast">
-				<Option output="H:/proj/cpp/yparser proj/yparser/cmake-build-debug/libyparser.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="H:/proj/cpp/yparser proj/yparser/cmake-build-debug"/>
+				<Option output="F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/libyparser.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="H:/proj/cpp/yparser proj/yparser/../easyio"/>
+					<Add directory="F:/project/proj/cpp/yparser proj/yparser/../easyio"/>
 					<Add directory="D:/app/OpenSSL-Win64/include"/>
 					<Add directory="C:/Boost/include/boost-1_77"/>
 					<Add directory="D:/app/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
@@ -59,130 +59,130 @@
 					<Add directory="D:/app/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 yparser/fast"/>
-					<CompileFile command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 yparser/fast"/>
+					<CompileFile command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="H:/proj/cpp/yparser proj/yparser/cmake-build-debug"/>
+				<Option working_dir="F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="H:/proj/cpp/yparser proj/yparser/cmake-build-debug"/>
+				<Option working_dir="F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;H:/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/app/mingw64/bin/mingw32-make.exe -f &quot;F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/exception/derived/list_key_parse_err.hpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/exception/derived/list_key_parse_err.hpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/exception/derived/list_value_parse_err.hpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/exception/derived/list_value_parse_err.hpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/exception/derived/map_key_parse_err.hpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/exception/derived/map_key_parse_err.hpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/exception/derived/map_value_parse_err.hpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/exception/derived/map_value_parse_err.hpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/exception/derived/scalar_key_parse_err.hpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/exception/derived/scalar_key_parse_err.hpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/exception/derived/scalar_value_parse_err.hpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/exception/derived/scalar_value_parse_err.hpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/exception/derived/unexpected_type_err.hpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/exception/derived/unexpected_type_err.hpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/exception/derived/unknown_type_err.hpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/exception/derived/unknown_type_err.hpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/exception/yparser_error.cpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/exception/yparser_error.cpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/exception/yparser_error.h">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/exception/yparser_error.h">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/globalheaders.h">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/globalheaders.h">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/interface/com/IHashable.hpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/interface/com/IHashable.hpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/interface/com/IKeyValueTangible.hpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/interface/com/IKeyValueTangible.hpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/interface/com/ISerializable.hpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/interface/com/ISerializable.hpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/interface/com/IStreamable.hpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/interface/com/IStreamable.hpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/interface/com/IStringable.hpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/interface/com/IStringable.hpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/interface/interface.h">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/interface/interface.h">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/parser/parser.cpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/parser/parser.cpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/parser/parser.h">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/parser/parser.h">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/type/YmlRaw.cpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/type/YmlRaw.cpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/type/YmlRaw.h">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/type/YmlRaw.h">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlList.cpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlList.cpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlList.h">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlList.h">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlMap.cpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlMap.cpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlMap.h">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlMap.h">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.cpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.cpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.h">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.h">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlScalar.cpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlScalar.cpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/type/derived/YmlScalar.h">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlScalar.h">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/util/util.cpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/util/util.cpp">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/util/util.h">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/util/util.h">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/include/yparser.h">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/yparser.h">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="H:/proj/cpp/yparser proj/yparser/CMakeLists.txt">
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -15,7 +15,7 @@ vector<YmlRaw> Self::lazyParser(const string &yml) {
 
     vector<YmlRaw> arr;
 
-    for (const auto &el:results) {
+    for (const auto &el: results) {
         if (YmlRaw::isMap(el))
             arr.emplace_back(YmlRaw(el, YmlRaw::Type::mapping));
         else if (YmlRaw::isList(el))
@@ -26,7 +26,7 @@ vector<YmlRaw> Self::lazyParser(const string &yml) {
             arr.emplace_back(YmlRaw(el, YmlRaw::Type::text));
     }
 
-    return vector<YmlRaw>(arr);
+    return arr;
 }
 
 /*
