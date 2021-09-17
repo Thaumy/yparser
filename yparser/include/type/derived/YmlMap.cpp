@@ -90,7 +90,9 @@ Self Self::with(const YmlRaw &ymlRaw) {
     if (ymlRaw.isMap())
         return YmlMap(raw);
     else
-        throw bad_cast();
+        throw unexpected_type_err(
+                "This string is can't be recognized as a YmlMap:\n"
+                + raw);
 }
 
 void Self::setKey(const string &key) {
@@ -137,7 +139,11 @@ void Self::add(const string &key, const yparser::YmlRaw &value) {
 }
 
 yparser::YmlRaw Self::getElementValue(const string &key) {
-    return this->elements.at(key);
+    return elements.at(key);
+}
+
+yparser::YmlRaw Self::operator[](const string &key) {
+    return elements.at(key);
 }
 
 vector<yparser::YmlRaw> Self::getElementValues() {

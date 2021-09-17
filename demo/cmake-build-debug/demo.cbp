@@ -91,6 +91,9 @@
 		<Unit filename="F:/project/proj/cpp/yparser proj/demo/main.cpp">
 			<Option target="demo"/>
 		</Unit>
+		<Unit filename="F:/project/proj/cpp/yparser proj/demo/tests/format_test.hpp">
+			<Option target="demo"/>
+		</Unit>
 		<Unit filename="F:/project/proj/cpp/yparser proj/demo/tests/parse_test.hpp">
 			<Option target="demo"/>
 		</Unit>

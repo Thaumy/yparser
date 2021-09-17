@@ -1,29 +1,32 @@
-hola: hello
-sekai: world
-students:
-  Alice:
-    message: good
-    nekos:
-      cat1: jbcat
-      cat2: ooo
-  Joe:
-    favorNumbers:
-      - 114
-      - 514
-      - 000
-    message: thaumy12384
-    phone: 1951327599
-AwesomeSite:
-  url: http://cdn.thaumy.cn/
-Goods:
-  -
-    fruits:
-      -
-        co: apple
-        keyborad: qwert
-      - banana
-      - cherry
-  - id1: 1
-  - hybrid
-List:
-  - 12384
+934770716910:
+  first_name: Thaumy
+  last_name: Cheng
+  sex: male
+  phone: 1234567890
+  hobby: 
+    - coding
+    - read book
+    - fishing
+385271188675:
+  first_name: Alice
+  last_name: Miyabi
+  sex: female
+  phone: 1527561890
+  hobby: 
+    - small talk
+    - sleeping
+105507332749:
+  first_name: Tim
+  last_name: Cook
+  sex: male
+  phone: 1136569821
+  hobby: 
+    - #This hobby can be broken down
+      sell_things:
+        - iphone
+        - mac
+        - etc
+    - 
+      - a
+      - b
+    - clear inventory

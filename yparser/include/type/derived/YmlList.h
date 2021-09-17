@@ -38,6 +38,9 @@ namespace yparser {
         //添加元素
         void add(const YmlRaw &element);
 
+        //使用数组下标访问
+        YmlRaw operator[](const int &index);
+
         //取元素表
         vector<YmlRaw> getElements();
 

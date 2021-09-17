@@ -665,5 +665,6 @@ CMakeFiles/demo.dir/main.cpp.obj: \
  D:/app/OpenSSL-Win64/include/openssl/opensslv.h \
  D:/app/OpenSSL-Win64/include/openssl/sha.h \
  ../main.cpp \
+ ../tests/format_test.hpp \
  ../tests/parse_test.hpp \
  ../tests/serialize_test1.hpp

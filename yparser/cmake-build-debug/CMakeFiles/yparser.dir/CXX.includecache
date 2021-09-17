@@ -6046,24 +6046,6 @@ F:/project/proj/cpp/yparser proj/yparser/include/interface/com/IStreamable.hpp
 com/IStringable.hpp
 F:/project/proj/cpp/yparser proj/yparser/include/interface/com/IStringable.hpp
 
-F:/project/proj/cpp/yparser proj/yparser/include/parser/parser.cpp
-parser.h
-F:/project/proj/cpp/yparser proj/yparser/include/parser/parser.h
-
-F:/project/proj/cpp/yparser proj/yparser/include/parser/parser.h
-../type/YmlRaw.h
-F:/project/proj/cpp/yparser proj/yparser/include/type/YmlRaw.h
-../type/derived/YmlMap.h
-F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlMap.h
-../type/derived/YmlList.h
-F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlList.h
-../type/derived/YmlScalar.h
-F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlScalar.h
-
-F:/project/proj/cpp/yparser proj/yparser/include/type/YmlRaw.cpp
-YmlRaw.h
-F:/project/proj/cpp/yparser proj/yparser/include/type/YmlRaw.h
-
 F:/project/proj/cpp/yparser proj/yparser/include/type/YmlRaw.h
 ../globalheaders.h
 F:/project/proj/cpp/yparser proj/yparser/include/globalheaders.h
@@ -6088,10 +6070,6 @@ F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.h
 ../derived/YmlScalar.h
 F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlScalar.h
 
-F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlMap.cpp
-YmlMap.h
-F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlMap.h
-
 F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlMap.h
 ../YmlRaw.h
 F:/project/proj/cpp/yparser proj/yparser/include/type/YmlRaw.h
@@ -6103,10 +6081,6 @@ F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlList.h
 F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.h
 ../derived/YmlScalar.h
 F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlScalar.h
-
-F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.cpp
-YmlRoot.h
-F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.h
 
 F:/project/proj/cpp/yparser proj/yparser/include/type/derived/YmlRoot.h
 ../YmlRaw.h

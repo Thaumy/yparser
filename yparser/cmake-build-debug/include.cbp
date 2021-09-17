@@ -116,9 +116,6 @@
 		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/exception/yparser_error.h">
 			<Option target="yparser"/>
 		</Unit>
-		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/globalheaders.h">
-			<Option target="yparser"/>
-		</Unit>
 		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/interface/com/IHashable.hpp">
 			<Option target="yparser"/>
 		</Unit>
@@ -177,9 +174,6 @@
 			<Option target="yparser"/>
 		</Unit>
 		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/util/util.h">
-			<Option target="yparser"/>
-		</Unit>
-		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/yparser.h">
 			<Option target="yparser"/>
 		</Unit>
 		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/CMakeLists.txt">

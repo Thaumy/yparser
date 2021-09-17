@@ -25,12 +25,14 @@ Self::YmlList(const string &ymlOrKey) : YmlRaw(ymlOrKey, list) {
     }
     const auto &yml = ymlOrKey;
     {//初始化key
-        auto result = regSS(yml, R"((\w+):\n  -)", 1);
-        if (!result.empty())
+        auto result = regSS(yml, R"((\w+|):\n  -)", 1);
+        IKeyValueTangible::setKey(result);
+
+        /*if (!result.empty())
             IKeyValueTangible::setKey(result);
         else//无法解析key时报错
             throw list_key_parse_err
-                    ("error occurred when parsing this:\n" + yml);
+                    ("error occurred when parsing this:\n" + yml);*/
     }
     {//初始化value
         auto result = regSS
@@ -52,6 +54,11 @@ Self::YmlList(const string &ymlOrKey) : YmlRaw(ymlOrKey, list) {
                 if (isRoot(el)) {//只有在List的情况下才可能产生聚合根
                     YmlRoot root_el(el);
                     elements.emplace_back(root_el);
+                } else if (regex_search(el, boost::regex(R"(^-)"), boost::regex_constants::format_first_only)) {
+                    //如果是一个无键列表
+                    util::yml::incIndentation(el);
+                    YmlRaw noKeyList(":" + el, list);
+                    elements.emplace_back(noKeyList);
                 } else
                     elements.emplace_back(YmlRaw(el, YmlRaw::getType(el)));
             }
@@ -63,18 +70,31 @@ Self::YmlList(const string &ymlOrKey) : YmlRaw(ymlOrKey, list) {
 
 string Self::serialize() const {
     ostringstream serialized;//提高拼接效率
-    serialized << getKey() << ":\n";
-
     using namespace util::yml;
-    for (const auto &el: elements) {
-        auto el_string = el.toString();
-        if (isSingleLine(el_string))
-            serialized << "  - " << el_string << "\n";//最后会产生空行
-        else {//对非单行文本缩进两次
-            incIndentation(el_string);
-            incIndentation(el_string);
-            serialized << "  -\n"
-                       << el_string << "\n";//最后会产生空行
+    if (!getKey().empty()) {//有无键列表
+        serialized << getKey() << ":\n";
+
+        for (const auto &el: elements) {
+            auto el_string = el.toString();
+            if (isSingleLine(el_string))
+                serialized << "  - " << el_string << "\n";//最后会产生空行
+            else {//对非单行文本缩进两次
+                incIndentation(el_string);
+                incIndentation(el_string);
+                serialized << "  -\n"
+                           << el_string << "\n";//最后会产生空行
+            }
+        }
+    } else {//无键列表，缩进要少一次
+        for (const auto &el: elements) {
+            auto el_string = el.toString();
+            if (isSingleLine(el_string))
+                serialized << "- " << el_string << "\n";//最后会产生空行
+            else {//对非单行文本缩进一次
+                incIndentation(el_string);
+                serialized << "-\n"
+                           << el_string << "\n";//最后会产生空行
+            }
         }
     }
 
@@ -93,7 +113,9 @@ Self Self::with(const YmlRaw &ymlRaw) {
     if (ymlRaw.isList())
         return YmlList(raw);
     else
-        throw bad_cast();
+        throw unexpected_type_err(
+                "This string is can't be recognized as a YmlList:\n"
+                + raw);
 }
 
 void Self::setKey(const string &newKey) {
@@ -116,4 +138,8 @@ void Self::add(const YmlRaw &element) {
 
 vector<yparser::YmlRaw> Self::getElements() {
     return elements;
+}
+
+yparser::YmlRaw Self::operator[](const int &index) {
+    return elements[index];
 }

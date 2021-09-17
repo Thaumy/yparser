@@ -34,6 +34,9 @@ namespace yparser {
         static YmlRoot with(const YmlRaw &);
 
     public:
+        //使用键值访问
+        YmlRaw operator[](const int &index);
+
         vector<YmlRaw> getElements();
 
         void add(const YmlRaw &element);

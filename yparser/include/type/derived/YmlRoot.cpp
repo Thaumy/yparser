@@ -44,10 +44,6 @@ Self Self::complie() {
     return *this;
 }
 
-vector<yparser::YmlRaw> Self::getElements() {
-    return elements;
-}
-
 void Self::add(const yparser::YmlRaw &element) {
     //编译后添加到元素列表
     if (typeid(element) == typeid(YmlMap))
@@ -72,4 +68,12 @@ Self Self::with(const yparser::YmlRaw &ymlRaw) {
         return YmlRoot(raw);
     else
         throw bad_cast();
+}
+
+yparser::YmlRaw Self::operator[](const int &index) {
+    return elements[index];
+}
+
+vector<yparser::YmlRaw> Self::getElements() {
+    return elements;
 }

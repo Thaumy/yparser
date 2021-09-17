@@ -46,8 +46,12 @@ namespace yparser {
         [[deprecated("Please use 'void add(const YmlRaw &value)'")]]
         void add(const string &key, const YmlRaw &value);
 
-        //取得元素
+        //取得元素，已弃用
+        [[deprecated("Please use 'YmlRaw operator[](const string &key)'")]]
         YmlRaw getElementValue(const string &key);
+
+        //使用键值访问
+        YmlRaw operator[](const string &key);
 
         //取元素值列表
         vector<YmlRaw> getElementValues();

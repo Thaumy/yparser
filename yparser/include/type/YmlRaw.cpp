@@ -66,7 +66,7 @@ bool Self::isMap(const string &yml) {
 }
 
 bool Self::isList(const string &yml) {
-    regex expr(R"(^\w+:\n  -)");
+    regex expr(R"(^(\w+|):\n  -)");//为兼容无键列表，使用\w+|
     return regex_search(yml, expr, mode);
 }
 

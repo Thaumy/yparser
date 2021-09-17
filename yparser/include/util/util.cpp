@@ -40,7 +40,7 @@ string Self::stringToSHA256(const string &str) {
     SHA256_Final(hash, &sha256);
 
     ostringstream stream;//使用流提升效率
-    for (unsigned char i : hash) {
+    for (unsigned char i: hash) {
         sprintf(buf, "%02x", i);
         stream << buf;
     }
@@ -73,6 +73,20 @@ void Self::yml::fixIndentation(string &yml) {
             //提取出不正确的缩进头，更改其缩进为2
             auto formatted = regex_replace(sm.str(), regex(R"(:\n +$)"), ":\n  ");
             //将不正确的缩进头替换为正确的缩进头
+            yml = regex_replace(yml, expr, formatted, mode);
+        }
+    }
+    {//纠正列表的同级过多缩进
+        regex expr(R"(^((  )+)- [^\n]\n\1 +- [^\n])");
+        smatch sm;
+        while (regex_search(yml, sm, expr, mode)) {//重复替换直到所有缩进正确
+            //提取出正确缩进（即第一个列表元素的缩进）
+            smatch correctIndentation;
+            string sm_str = sm.str();//如果不这样引入中间值的话，会产生乱码，妈的。
+            regex_search(sm_str, correctIndentation, regex(R"(^ *)"), mode);
+            //将所有行的缩进替换为正确缩进
+            auto formatted = regex_replace(sm.str(), regex(R"(^ *)"), correctIndentation.str());
+            //将正确缩进后的文本替换原来不正确缩进的文本
             yml = regex_replace(yml, expr, formatted, mode);
         }
     }
@@ -125,6 +139,6 @@ void Self::yml::formatPipeline(string &yml) {
              delBlankLine,//清除空行
              delLineEndSpace,//清除行尾空格
              fixIndentation};//修复错误缩进
-    for (const auto &f:pipeline)
+    for (const auto &f: pipeline)
         f(yml);//按照流水线处理yml
 }

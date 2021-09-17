@@ -47,5 +47,7 @@ Self Self::with(const YmlRaw &ymlRaw) {
     if (ymlRaw.isScalar())
         return YmlScalar(raw);
     else
-        throw bad_cast();
+        throw unexpected_type_err(
+                "This string is can't be recognized as a YmlScalar:\n"
+                + raw);
 }

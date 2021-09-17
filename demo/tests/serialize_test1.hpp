@@ -58,6 +58,20 @@ void serialize_test() {
                     root.add(YmlScalar("keyborad", "qwert"));
                 }
                 fruits.add(root);
+                YmlList noKeyList("");
+                {
+                    YmlList noKeyList1("");
+                    {
+                        YmlList noKeyList2("");
+                        {
+                            noKeyList2.add(YmlRaw("a"));
+                            noKeyList2.add(YmlRaw("b"));
+                        }
+                        noKeyList1.add(noKeyList2);
+                    }
+                    noKeyList.add(noKeyList1);
+                }
+                fruits.add(noKeyList);
                 fruits.add(YmlRaw("banana"));
                 fruits.add(YmlRaw("cherry"));
             }

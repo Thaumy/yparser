@@ -14,9 +14,9 @@ using namespace yparser;
 
 void greedyParseAll(const vector<YmlRaw> &parsed) {
     for (const auto &el: parsed) {
-        cout << "SHA: " << el.SHA256() << endl;
+        //cout << "SHA: " << el.SHA256() << endl;
         if (el.isMap()) {
-            auto it = YmlMap::with(el);;
+            auto it = YmlMap::with(el);
             cout << "MAP     :" << it.getKey() << endl;;
             greedyParseAll(it.getElementValues());
         } else if (el.isList()) {
