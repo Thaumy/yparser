@@ -1,0 +1,12 @@
+example:
+  -
+    - a
+    - b
+    -
+      - c
+      - d
+  -
+    bar:
+      - a
+      - b
+  - cherry
