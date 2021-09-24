@@ -11,6 +11,13 @@
 using namespace std;
 
 namespace util {
+    namespace io {
+        //从src读字符串
+        string read(const string &src);
+
+        //写str到tar
+        void write(const string &str, const string &tar);
+    }
 
     namespace reg {
         //正则表达式单值搜索
@@ -19,6 +26,7 @@ namespace util {
         //正则表达式多值搜索
         vector<string> multiSearch(const string &str, const string &expr, const int &position = 0);
     }
+
     namespace yml {
         //判断yml是否为单行文本
         bool isSingleLine(string &);

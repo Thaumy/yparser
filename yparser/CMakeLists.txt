@@ -3,7 +3,7 @@ project(include)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(root include)
+set(LIBRARY_OUTPUT_PATH ../lib)
 
 set(h1 include/yparser.h)
 set(h2 include/globalheaders.h)
@@ -34,16 +34,19 @@ set(i5 include/interface/com/IStreamable.hpp)
 set(i6 include/interface/com/IStringable.hpp)
 set(interfaces ${i1} ${i2} ${i3} ${i4} ${i5} ${i6})
 
-set(coms ${functions} ${exceptions} ${interfaces})
+set(coms ${headers} ${functions} ${exceptions} ${interfaces})
 
-include_directories(../easyio)
-link_directories(../easyio/cmake-build-debug)
-include_directories(D:/app/OpenSSL-Win64/include)
-link_directories(D:/app/OpenSSL-Win64/lib)
-include_directories(C:/Boost/include/boost-1_77)
-link_directories(C:/Boost/lib)
-
+# easyio
+link_directories(../easyio/lib)
+include_directories(../easyio/include)
 link_libraries(easyio)
+# Boost
+link_directories(C:/Boost/lib)
+include_directories(C:/Boost/include/boost-1_77)
+link_libraries(${Boost_LIBRARIES})
+# OpenSSL
+link_directories(D:/app/OpenSSL-Win64/lib)
+include_directories(D:/app/OpenSSL-Win64/include)
 link_libraries(openssl libcrypto libssl)
 
 add_library(yparser STATIC ${coms})

@@ -347,10 +347,16 @@
 		<Unit filename="F:/project/proj/cpp/yparser proj/unitest/main.cpp">
 			<Option target="unitest"/>
 		</Unit>
-		<Unit filename="F:/project/proj/cpp/yparser proj/unitest/test/parse_test1/test.hpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/unitest/test/test1/test.hpp">
 			<Option target="unitest"/>
 		</Unit>
-		<Unit filename="F:/project/proj/cpp/yparser proj/unitest/test/parse_test2/test.hpp">
+		<Unit filename="F:/project/proj/cpp/yparser proj/unitest/test/test2/test.hpp">
+			<Option target="unitest"/>
+		</Unit>
+		<Unit filename="F:/project/proj/cpp/yparser proj/unitest/test/test3/test.hpp">
+			<Option target="unitest"/>
+		</Unit>
+		<Unit filename="F:/project/proj/cpp/yparser proj/unitest/test/test4/test.hpp">
 			<Option target="unitest"/>
 		</Unit>
 		<Unit filename="F:/project/proj/cpp/yparser proj/unitest/CMakeLists.txt">

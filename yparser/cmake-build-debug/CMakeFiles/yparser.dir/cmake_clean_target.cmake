@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "libyparser.a"
+  "../lib/libyparser.a"
 )

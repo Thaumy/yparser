@@ -5,19 +5,31 @@
 
 using namespace std;
 
-TEST(parse_test1, eq) {
-    auto s1 = parse_test1();
-    auto s2 = parse_test1_output();
-    ASSERT_TRUE(s1 == s2);
+TEST(test1, eq) {
+    using namespace test1;
+    ASSERT_TRUE(run() == output());
 }
 
-TEST(parse_test2, eq) {
-    auto s1 = parse_test2();
-    auto s2 = parse_test2_output();
-    ASSERT_TRUE(s1 == s2);
+TEST(test2, eq) {
+    using namespace test2;
+    ASSERT_TRUE(run() == output());
 }
+
+TEST(test3, timing) {
+    using namespace test3;
+    ASSERT_FALSE(run());//解析结果必须非空
+    run();
+}
+
+TEST(test4, timing) {
+    using namespace test4;
+    ASSERT_FALSE(run());
+    run();;
+}
+
 
 int main() {
+    //test4::run();;;
     ::testing::InitGoogleTest();
     return RUN_ALL_TESTS();
 }

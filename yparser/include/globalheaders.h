@@ -8,11 +8,15 @@
 #include <algorithm>
 #include <exception>
 #include <iostream>
+#include <iterator>
+#include <memory>
 #include <string>
 #include <vector>
-//#include <regex>
+#include <thread>
+#include <cmath>
 #include <map>
 
+//#include <regex>
 #include <boost/regex.hpp>
 #include <openssl/sha.h>
 #include <easyio.h>

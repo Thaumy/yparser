@@ -5,7 +5,9 @@
 #ifndef UNITEST_GLOBALHEADERS_H
 #define UNITEST_GLOBALHEADERS_H
 
-#include "test/parse_test1/test.hpp"
-#include "test/parse_test2/test.hpp"
+#include "test/test1/test.hpp"
+#include "test/test2/test.hpp"
+#include "test/test3/test.hpp"
+#include "test/test4/test.hpp"
 
 #endif //UNITEST_GLOBALHEADERS_H

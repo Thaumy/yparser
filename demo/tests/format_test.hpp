@@ -6,6 +6,7 @@
 #include <string>
 #include <yparser.h>
 #include <easyio.h>
+#include "io_yml_string.hpp"
 
 
 using namespace std;
@@ -13,9 +14,8 @@ using namespace easyio;
 using namespace yparser;
 
 void format_test() {
-    auto path = R"(../configs/config.yml)";;;;
-    auto yml = *read(path);
+    auto yml = get_yml_string();
     auto formatted = YmlRaw(yml, parser::lazyParser).toString();
-    cout << "format_final:" << endl;;
+    cout << "format_final:" << endl;
     cout << formatted;
 }

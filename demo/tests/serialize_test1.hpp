@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <yparser.h>
+#include "io_yml_string.hpp"
 
 
 using namespace std;

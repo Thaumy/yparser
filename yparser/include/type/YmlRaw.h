@@ -24,6 +24,9 @@ namespace yparser {
         };
 
     public:
+        //仅用于容器默认初始化，非安全的构造器
+        YmlRaw();
+
         //使用字符串构造（可选解析器）
         explicit YmlRaw(string yml,
                         const function<vector<YmlRaw>(const string &)> &parser = nullptr);

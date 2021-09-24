@@ -5,7 +5,7 @@ CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.obj: \
  ../include/exception/yparser_error.cpp \
  ../include/exception/yparser_error.h
 CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: \
- ../../easyio/easyio.h \
+ ../../easyio/include/easyio.h \
  C:/Boost/include/boost-1_77/boost/assert.hpp \
  C:/Boost/include/boost-1_77/boost/assert/source_location.hpp \
  C:/Boost/include/boost-1_77/boost/checked_delete.hpp \
@@ -668,7 +668,7 @@ CMakeFiles/yparser.dir/include/parser/parser.cpp.obj: \
  ../include/type/derived/YmlScalar.h \
  ../include/util/util.h
 CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj: \
- ../../easyio/easyio.h \
+ ../../easyio/include/easyio.h \
  C:/Boost/include/boost-1_77/boost/assert.hpp \
  C:/Boost/include/boost-1_77/boost/assert/source_location.hpp \
  C:/Boost/include/boost-1_77/boost/checked_delete.hpp \
@@ -1326,7 +1326,7 @@ CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj: \
  ../include/type/YmlRaw.h \
  ../include/util/util.h
 CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: \
- ../../easyio/easyio.h \
+ ../../easyio/include/easyio.h \
  C:/Boost/include/boost-1_77/boost/assert.hpp \
  C:/Boost/include/boost-1_77/boost/assert/source_location.hpp \
  C:/Boost/include/boost-1_77/boost/checked_delete.hpp \
@@ -1988,7 +1988,7 @@ CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj: \
  ../include/type/derived/YmlScalar.h \
  ../include/util/util.h
 CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: \
- ../../easyio/easyio.h \
+ ../../easyio/include/easyio.h \
  C:/Boost/include/boost-1_77/boost/assert.hpp \
  C:/Boost/include/boost-1_77/boost/assert/source_location.hpp \
  C:/Boost/include/boost-1_77/boost/checked_delete.hpp \
@@ -2650,7 +2650,7 @@ CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj: \
  ../include/type/derived/YmlScalar.h \
  ../include/util/util.h
 CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: \
- ../../easyio/easyio.h \
+ ../../easyio/include/easyio.h \
  C:/Boost/include/boost-1_77/boost/assert.hpp \
  C:/Boost/include/boost-1_77/boost/assert/source_location.hpp \
  C:/Boost/include/boost-1_77/boost/checked_delete.hpp \
@@ -3312,7 +3312,7 @@ CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj: \
  ../include/type/derived/YmlScalar.h \
  ../include/util/util.h
 CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj: \
- ../../easyio/easyio.h \
+ ../../easyio/include/easyio.h \
  C:/Boost/include/boost-1_77/boost/assert.hpp \
  C:/Boost/include/boost-1_77/boost/assert/source_location.hpp \
  C:/Boost/include/boost-1_77/boost/checked_delete.hpp \
@@ -3971,7 +3971,7 @@ CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj: \
  ../include/type/derived/YmlScalar.h \
  ../include/util/util.h
 CMakeFiles/yparser.dir/include/util/util.cpp.obj: \
- ../../easyio/easyio.h \
+ ../../easyio/include/easyio.h \
  C:/Boost/include/boost-1_77/boost/assert.hpp \
  C:/Boost/include/boost-1_77/boost/assert/source_location.hpp \
  C:/Boost/include/boost-1_77/boost/checked_delete.hpp \

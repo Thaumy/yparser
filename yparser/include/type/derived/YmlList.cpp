@@ -100,6 +100,7 @@ string Self::serialize() const {
 
     auto result = serialized.str();
     delBlankLine(result);//删除空行
+
     return result;
 }
 

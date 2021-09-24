@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <yparser.h>
+#include "io_yml_string.hpp"
 
 
 using namespace std;
@@ -15,7 +16,7 @@ void serialize_test() {
     YmlMap map;
     map.setKey("105507332749");
     {
-        map.add(YmlScalar("first_name", "Tim"));
+        map.add(YmlScalar("first_name", "Tim"));;
         map.add(YmlScalar("phone", "1136569821"));
         YmlList list;
         list.setKey("hobby");

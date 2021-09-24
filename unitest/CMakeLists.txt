@@ -23,10 +23,9 @@ link_directories(C:/Boost/lib)
 include_directories(C:/Boost/include/boost-1_77)
 link_libraries(${Boost_LIBRARIES})
 
-set(t1 test/parse_test1/test.hpp)
-set(t2 test/parse_test2/test.hpp)
-set(tests ${t1} ${t2} fn/fn.hpp)
+file(GLOB all_tests test/*/*.hpp)
+set(test_headers fn/fn.hpp ${all_tests})
 
-add_executable(unitest main.cpp globalheaders.h ${tests})
+add_executable(unitest main.cpp globalheaders.h ${test_headers})
 
 target_link_libraries(unitest gtest gtest_main yparser easyio)

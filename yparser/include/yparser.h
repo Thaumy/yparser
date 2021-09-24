@@ -8,18 +8,20 @@
 
 //errs
 #include "exception/yparser_error.h"
-#include "exception/derived/list_key_parse_err.hpp"
-#include "exception/derived/list_value_parse_err.hpp"
 #include "exception/derived/map_key_parse_err.hpp"
 #include "exception/derived/map_value_parse_err.hpp"
+#include "exception/derived/list_key_parse_err.hpp"
+#include "exception/derived/list_value_parse_err.hpp"
 #include "exception/derived/scalar_key_parse_err.hpp"
 #include "exception/derived/scalar_value_parse_err.hpp"
+#include "exception/derived/unknown_type_err.hpp"
+#include "exception/derived/unexpected_type_err.hpp"
 
 //types
 #include "type/YmlRaw.h"
 #include "type/derived/YmlMap.h"
 #include "type/derived/YmlList.h"
-#include "type/derived/YmlScalar.h"
 #include "type/derived/YmlRoot.h"
+#include "type/derived/YmlScalar.h"
 
 #endif //YPARSER_YPARSER_H

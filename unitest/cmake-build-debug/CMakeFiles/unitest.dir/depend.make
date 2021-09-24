@@ -687,5 +687,7 @@ CMakeFiles/unitest.dir/main.cpp.obj: \
  ../fn/fn.hpp \
  ../globalheaders.h \
  ../main.cpp \
- ../test/parse_test1/test.hpp \
- ../test/parse_test2/test.hpp
+ ../test/test1/test.hpp \
+ ../test/test2/test.hpp \
+ ../test/test3/test.hpp \
+ ../test/test4/test.hpp

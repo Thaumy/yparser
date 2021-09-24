@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/easyio.dir/easyio.cpp.obj"
-  "libeasyio.a"
-  "libeasyio.pdb"
+  "../lib/libeasyio.a"
+  "../lib/libeasyio.pdb"
+  "CMakeFiles/easyio.dir/include/easyio.cpp.obj"
 )
 
 # Per-language clean rules from dependency scanning.

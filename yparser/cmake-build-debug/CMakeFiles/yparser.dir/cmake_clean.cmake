@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "../lib/libyparser.a"
+  "../lib/libyparser.pdb"
   "CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.obj"
   "CMakeFiles/yparser.dir/include/parser/parser.cpp.obj"
   "CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj"
@@ -7,8 +9,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj"
   "CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj"
   "CMakeFiles/yparser.dir/include/util/util.cpp.obj"
-  "libyparser.a"
-  "libyparser.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

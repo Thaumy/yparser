@@ -21,9 +21,9 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../../easyio"
-  "D:/app/OpenSSL-Win64/include"
+  "../../easyio/include"
   "C:/Boost/include/boost-1_77"
+  "D:/app/OpenSSL-Win64/include"
   )
 
 # The set of dependency files which are needed:

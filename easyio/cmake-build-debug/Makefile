@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "D:\app\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "D:\app\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "H:\proj\cpp\yparser proj\easyio"
+CMAKE_SOURCE_DIR = "F:\project\proj\cpp\yparser proj\easyio"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "H:\proj\cpp\yparser proj\easyio\cmake-build-debug"
+CMAKE_BINARY_DIR = "F:\project\proj\cpp\yparser proj\easyio\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = "H:\proj\cpp\yparser proj\easyio\cmake-build-debug"
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"D:\app\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"D:\app\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "H:\proj\cpp\yparser proj\easyio\cmake-build-debug\CMakeFiles" "H:\proj\cpp\yparser proj\easyio\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "F:\project\proj\cpp\yparser proj\easyio\cmake-build-debug\CMakeFiles" "F:\project\proj\cpp\yparser proj\easyio\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "H:\proj\cpp\yparser proj\easyio\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "F:\project\proj\cpp\yparser proj\easyio\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -128,29 +128,29 @@ easyio/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\easyio.dir\build.make CMakeFiles/easyio.dir/build
 .PHONY : easyio/fast
 
-easyio.obj: easyio.cpp.obj
-.PHONY : easyio.obj
+include/easyio.obj: include/easyio.cpp.obj
+.PHONY : include/easyio.obj
 
 # target to build an object file
-easyio.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\easyio.dir\build.make CMakeFiles/easyio.dir/easyio.cpp.obj
-.PHONY : easyio.cpp.obj
+include/easyio.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\easyio.dir\build.make CMakeFiles/easyio.dir/include/easyio.cpp.obj
+.PHONY : include/easyio.cpp.obj
 
-easyio.i: easyio.cpp.i
-.PHONY : easyio.i
+include/easyio.i: include/easyio.cpp.i
+.PHONY : include/easyio.i
 
 # target to preprocess a source file
-easyio.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\easyio.dir\build.make CMakeFiles/easyio.dir/easyio.cpp.i
-.PHONY : easyio.cpp.i
+include/easyio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\easyio.dir\build.make CMakeFiles/easyio.dir/include/easyio.cpp.i
+.PHONY : include/easyio.cpp.i
 
-easyio.s: easyio.cpp.s
-.PHONY : easyio.s
+include/easyio.s: include/easyio.cpp.s
+.PHONY : include/easyio.s
 
 # target to generate assembly for a file
-easyio.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\easyio.dir\build.make CMakeFiles/easyio.dir/easyio.cpp.s
-.PHONY : easyio.cpp.s
+include/easyio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\easyio.dir\build.make CMakeFiles/easyio.dir/include/easyio.cpp.s
+.PHONY : include/easyio.cpp.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... easyio
-	@echo ... easyio.obj
-	@echo ... easyio.i
-	@echo ... easyio.s
+	@echo ... include/easyio.obj
+	@echo ... include/easyio.i
+	@echo ... include/easyio.s
 .PHONY : help
 
 

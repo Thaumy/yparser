@@ -3,4 +3,6 @@ project(easyio)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_library(easyio STATIC easyio.h easyio.cpp)
+set(LIBRARY_OUTPUT_PATH ../lib)
+
+add_library(easyio STATIC include/easyio.h include/easyio.cpp)

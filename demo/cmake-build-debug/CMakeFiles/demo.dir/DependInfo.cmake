@@ -15,7 +15,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../../yparser/include"
-  "../../easyio"
+  "../../easyio/include"
   "D:/app/OpenSSL-Win64/include"
   "C:/Boost/include/boost-1_77"
   )

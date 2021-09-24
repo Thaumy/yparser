@@ -18,15 +18,15 @@
 				</MakeCommands>
 			</Target>
 			<Target title="yparser">
-				<Option output="F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/libyparser.a" prefix_auto="0" extension_auto="0"/>
+				<Option output="F:/project/proj/cpp/yparser proj/yparser/lib/libyparser.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="F:/project/proj/cpp/yparser proj/yparser/../easyio"/>
-					<Add directory="D:/app/OpenSSL-Win64/include"/>
+					<Add directory="F:/project/proj/cpp/yparser proj/yparser/../easyio/include"/>
 					<Add directory="C:/Boost/include/boost-1_77"/>
+					<Add directory="D:/app/OpenSSL-Win64/include"/>
 					<Add directory="D:/app/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/app/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="D:/app/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -42,15 +42,15 @@
 				</MakeCommands>
 			</Target>
 			<Target title="yparser/fast">
-				<Option output="F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug/libyparser.a" prefix_auto="0" extension_auto="0"/>
+				<Option output="F:/project/proj/cpp/yparser proj/yparser/lib/libyparser.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="F:/project/proj/cpp/yparser proj/yparser/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="F:/project/proj/cpp/yparser proj/yparser/../easyio"/>
-					<Add directory="D:/app/OpenSSL-Win64/include"/>
+					<Add directory="F:/project/proj/cpp/yparser proj/yparser/../easyio/include"/>
 					<Add directory="C:/Boost/include/boost-1_77"/>
+					<Add directory="D:/app/OpenSSL-Win64/include"/>
 					<Add directory="D:/app/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/app/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="D:/app/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -116,6 +116,9 @@
 		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/exception/yparser_error.h">
 			<Option target="yparser"/>
 		</Unit>
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/globalheaders.h">
+			<Option target="yparser"/>
+		</Unit>
 		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/interface/com/IHashable.hpp">
 			<Option target="yparser"/>
 		</Unit>
@@ -174,6 +177,9 @@
 			<Option target="yparser"/>
 		</Unit>
 		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/util/util.h">
+			<Option target="yparser"/>
+		</Unit>
+		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/include/yparser.h">
 			<Option target="yparser"/>
 		</Unit>
 		<Unit filename="F:/project/proj/cpp/yparser proj/yparser/CMakeLists.txt">

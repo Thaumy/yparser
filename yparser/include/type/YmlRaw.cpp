@@ -20,6 +20,10 @@ string Self::toString() const {
     return this->raw;
 }
 
+Self::YmlRaw() {
+
+}
+
 //默认用户输入需要格式化，只有此构造才会调用格式化函数流水线
 Self::YmlRaw(string yml,
              const function<vector<Self>(const string &)> &parser) {
@@ -59,24 +63,24 @@ bool Self::isText() const {
     return this->type == text;
 }
 
-bool Self::isMap(const string &yml) {
+inline bool Self::isMap(const string &yml) {
     //^\w+:\n(  )+\w+:
     regex expr(R"(^\w+:\n  \w)");//perl syntax
     return regex_search(yml, expr, mode);
 }
 
-bool Self::isList(const string &yml) {
+inline bool Self::isList(const string &yml) {
     regex expr(R"(^(\w+|):\n  -)");//为兼容无键列表，使用\w+|
     return regex_search(yml, expr, mode);
 }
 
-bool Self::isScalar(const string &yml) {
+inline bool Self::isScalar(const string &yml) {
     //^\w+: .+
     regex expr(R"(^\w+: [^\n])");//perl syntax
     return regex_search(yml, expr, mode);
 }
 
-bool Self::isRoot(const string &yml) {
+inline bool Self::isRoot(const string &yml) {
     auto results = util::reg::multiSearch//与parser用的表达式相同
             (yml, R"(^\w+:[\n ](((  )+[^\n]+\n*)+(?=\n|$)|[^\n]+))");//perl syntax
     //如果结果大于1的话就是聚合根（0为text类型情况，非聚合根）

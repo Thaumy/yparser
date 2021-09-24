@@ -6,6 +6,7 @@
 #include <string>
 #include <yparser.h>
 #include <easyio.h>
+#include "io_yml_string.hpp"
 
 
 using namespace std;
@@ -38,9 +39,8 @@ void greedyParseAll(const vector<YmlRaw> &parsed) {
 }
 
 void parse_test() {
-    auto path = R"(../configs/config.yml)";;
-    auto yml = *read(path);;
-    auto parsed = YmlRaw(yml, parser::lazyParser).parse();
-    //write(raw, path);
+    auto yml = get_yml_string();
+    auto parsed = YmlRaw(yml, parser::lazyParserMT).parse();
+
     greedyParseAll(parsed);
 }
