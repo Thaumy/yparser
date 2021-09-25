@@ -1,3 +1,0 @@
-"D:\app\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\unitest.dir/objects.a
-D:\app\mingw64\bin\ar.exe cr CMakeFiles\unitest.dir/objects.a @CMakeFiles\unitest.dir\objects1.rsp
-D:\app\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\unitest.dir/objects.a -Wl,--no-whole-archive -o unitest.exe -Wl,--out-implib,libunitest.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\unitest.dir\linklibs.rsp

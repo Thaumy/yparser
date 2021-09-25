@@ -1,2 +1,0 @@
-D:\app\mingw64\bin\ar.exe qc ..\lib\libyparser.a CMakeFiles/yparser.dir/include/util/util.cpp.obj CMakeFiles/yparser.dir/include/type/YmlRaw.cpp.obj CMakeFiles/yparser.dir/include/type/derived/YmlMap.cpp.obj CMakeFiles/yparser.dir/include/type/derived/YmlList.cpp.obj CMakeFiles/yparser.dir/include/type/derived/YmlScalar.cpp.obj CMakeFiles/yparser.dir/include/type/derived/YmlRoot.cpp.obj CMakeFiles/yparser.dir/include/parser/parser.cpp.obj CMakeFiles/yparser.dir/include/exception/yparser_error.cpp.obj
-D:\app\mingw64\bin\ranlib.exe ..\lib\libyparser.a

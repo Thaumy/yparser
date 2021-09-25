@@ -1,2 +1,0 @@
-D:\app\mingw64\bin\ar.exe qc ..\lib\libeasyio.a CMakeFiles/easyio.dir/include/easyio.cpp.obj
-D:\app\mingw64\bin\ranlib.exe ..\lib\libeasyio.a

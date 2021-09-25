@@ -1,1 +1,0 @@
--I"F:/project/proj/cpp/yparser proj/unitest/googletest/include" -IF:/project/proj/cpp/YPARSE~1/unitest/../yparser/include -IF:/project/proj/cpp/YPARSE~1/unitest/../easyio/include -ID:/app/OpenSSL-Win64/include -IC:/Boost/include/boost-1_77 -isystem F:/project/proj/cpp/YPARSE~1/unitest/lib/GOOGLE~2/include -isystem F:/project/proj/cpp/YPARSE~1/unitest/lib/GOOGLE~2
