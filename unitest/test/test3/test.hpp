@@ -12,12 +12,22 @@ using namespace std;
 using namespace easyio;
 using namespace yparser;
 
-//串行解析计时测试
+//此用例测试示例文本1的正确解析
+//使用lazyParserMT
 namespace test3 {
-    int run() {
+    string run() {
         auto path = R"(../test/test3/input.yml)";
         auto yml = read(path);
+        ostringstream os;
         auto parsed = YmlRaw(yml, parser::lazyParserMT).parse();
-        return parsed.empty();
+
+        recParse(os, parsed);
+
+        return os.str();
+    }
+
+    string output() {
+        auto path = R"(../test/test3/output.txt)";
+        return read(path);
     }
 }

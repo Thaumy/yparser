@@ -20,6 +20,6 @@ link_directories(C:/Boost/lib)
 include_directories(C:/Boost/include/boost-1_77)
 link_libraries(${Boost_LIBRARIES})
 
-add_executable(demo main.cpp tests/parse_test.hpp tests/serialize_test1.hpp tests/serialize_test2.hpp tests/format_test.hpp tests/blob_generator.hpp tests/io_yml_string.hpp)
+add_executable(demo main.cpp test/parse_test.hpp test/serialize_test1.hpp test/serialize_test2.hpp test/format_test.hpp test/blob_generator.hpp test/io_yml_string.hpp)
 
 target_link_libraries(demo yparser easyio)

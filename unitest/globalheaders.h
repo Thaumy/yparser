@@ -9,5 +9,7 @@
 #include "test/test2/test.hpp"
 #include "test/test3/test.hpp"
 #include "test/test4/test.hpp"
+#include "test/test5/test.hpp"
+#include "test/test6/test.hpp"
 
 #endif //UNITEST_GLOBALHEADERS_H

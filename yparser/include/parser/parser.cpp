@@ -38,70 +38,83 @@ vector<YmlRaw> Self::lazyParserMT(const string &yml) {
     auto results = util::reg::multiSearch//此表达式不应该匹配得到每个节点末的\n
             (yml, R"(^\w+:[\n ](((  )+[^\n]+\n*)+(?=\n|$)|[^\n]+))");//perl syntax
 
-    if (results.empty())//数据集为空直接返回
-        return vector<YmlRaw>{};
-
-    vector<YmlRaw> arr;//vector支持并发写入
-    arr.resize(results.size());//预初始化全部位置
-
-    typedef std::vector<string>::iterator iter;
-    //解析函数
-    auto fn = [&arr](iter start, iter afterEnd, int startIndex) {
-        while (start < afterEnd) {
-            if (YmlRaw::isMap(*start))
-                arr[startIndex] = YmlRaw(*start, YmlRaw::Type::mapping);
-            else if (YmlRaw::isList(*start))
-                arr[startIndex] = YmlRaw(*start, YmlRaw::Type::list);
-            else if (YmlRaw::isScalar(*start))
-                arr[startIndex] = YmlRaw(*start, YmlRaw::Type::scalar);
-            else//is text
-                arr[startIndex] = YmlRaw(*start, YmlRaw::Type::text);
-
-            start++;
-            startIndex++;//移入下一位置
-        }
-    };
-
     const int slice_count = (int) results.size();//总切片数
-    const int max_threads = 512;//同时解析的最大线程数
-    const int used_threads =//实际使用的线程数
-            slice_count > max_threads ? max_threads : slice_count;
-    const int avg = slice_count / used_threads;//每线程平均处理切片数，向下取整
-    //由于used_threads*avg ≤ slice_count，所以需要将最后一部分切片分配给最后一个线程
-    const int last = slice_count - used_threads * avg;//最后一个线程被分配的切片数
+
+    if (slice_count == 0)//数据集为空直接返回
+        return vector<YmlRaw>{};
+    else if (slice_count >= 2) {
+        //设计上，slice_count值至少为2才能由多线程正确解码
+        //合理更改此值能够权衡何时启用多线程解码
+        //为调试目的，此处取2
+
+        vector<YmlRaw> arr;//vector支持并发写入
+        arr.resize(results.size());//预初始化全部位置
+
+        typedef std::vector<string>::iterator iter;
+        //解析函数，解析范围[start,afterEnd)
+        auto fn = [&arr](iter start, iter afterEnd, int startIndex) {
+            while (start < afterEnd) {
+                if (YmlRaw::isMap(*start))
+                    arr[startIndex] = YmlRaw(*start, YmlRaw::Type::mapping);
+                else if (YmlRaw::isList(*start))
+                    arr[startIndex] = YmlRaw(*start, YmlRaw::Type::list);
+                else if (YmlRaw::isScalar(*start))
+                    arr[startIndex] = YmlRaw(*start, YmlRaw::Type::scalar);
+                else//is text
+                    arr[startIndex] = YmlRaw(*start, YmlRaw::Type::text);
+
+                start++;
+                startIndex++;//移入下一位置
+            }
+        };
 
 
-    {//处理阶段
-        thread ts[used_threads];
+        const int max_threads = 512;//同时解析的最大线程数
+        const int used_threads =//实际使用的线程数
+                slice_count > max_threads ? max_threads : slice_count;
+        const int avg = slice_count / used_threads;//每线程平均处理切片数，向下取整
+        //由于used_threads*avg ≤ slice_count，所以需要将最后一部分切片分配给最后一个线程
+        const int last = slice_count - used_threads * avg;//最后一个线程被分配的切片数
 
-        int count = 0;//已处理切片数
-        auto begin = results.begin();
 
-        //将avg个切片分配到每一个线程，最后一个线程除外
-        for (int i = 0; i < used_threads - 1; ++i) {
-            ts[i] = thread(
-                    fn,
-                    begin + count,
-                    begin + count + avg,
-                    count
-            );
+        {//处理阶段
+            thread ts[used_threads];
 
-            count += avg;
+            int count = 0;//已处理切片数
+            auto begin = results.begin();
+
+            //将avg个切片分配到每一个线程，最后一个线程除外
+            for (int i = 0; (i < used_threads - 1); ++i) {
+                auto start = begin + count;
+                auto afterEnd = begin + count + avg;
+                ts[i] = thread
+                        (fn,
+                         start,
+                         afterEnd,
+                         count
+                        );
+
+                count += avg;
+            }
+
+            //将last个切片分配给最后一个线程
+            auto start = begin + count;
+            auto afterEnd = begin + count + avg;
+            ts[used_threads - 1] = thread
+                    (fn,
+                     start,
+                     afterEnd,
+                     count
+                    );
+
+            //阻塞到全部线程执行完成，空线程不会被join
+            for (int i = 0; i < used_threads; ++i)
+                ts[i].join();
         }
-        //将last个切片分配给最后一个线程
-        ts[used_threads - 1] = thread(
-                fn,
-                begin + count,
-                begin + count + last,
-                count
-        );
 
-        //阻塞到全部线程执行完成
-        for (int i = 0; i < used_threads; ++i)
-            ts[i].join();
-    }
-
-    return arr;
+        return arr;
+    } else
+        return lazyParser(yml);
 }
 
 

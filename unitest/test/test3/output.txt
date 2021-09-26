@@ -1,0 +1,11 @@
+LIST    :example
+LIST    :
+    TEXT:a
+    TEXT:b
+LIST    :
+    TEXT:c
+    TEXT:d
+LIST    :bar
+    TEXT:a
+    TEXT:b
+    TEXT:cherry

@@ -13,6 +13,7 @@ using namespace easyio;
 using namespace yparser;
 
 //此用例测试示例文本2的正确解析
+//使用lazyParser
 namespace test2 {
     string run() {
         auto path = R"(../test/test2/input.yml)";
