@@ -27,3 +27,13 @@ WIP.
 ### 已知问题&解决
 
 - ~~本parser基于C++标准正则库实现，受限于其NFA效率，在解析较大嵌套结构时（主要是缩进非常多的情况）会卡死。~~ Fixed✅，通过使用boost正则库重写所有匹配逻辑与表达式。
+
+### Doc
+
+[QuickStart](QuickStart.md)
+
+### Dependences
+
+- OpenSSL 3.0.0
+- Boost 1.77.0
+- easyio (At the root of this repo)
