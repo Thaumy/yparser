@@ -13,7 +13,10 @@
 using namespace interface;
 
 namespace yparser {
-    class YmlRaw : public IHashable, public IStringable {
+    class YmlRaw :
+            public IHashable,
+            public IStringable {
+
     public:
         string SHA256() const override;
 

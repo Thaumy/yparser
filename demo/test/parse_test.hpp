@@ -18,23 +18,26 @@ void greedyParseAll(const vector<YmlRaw> &parsed) {
         //cout << "SHA: " << el.SHA256() << endl;
         if (el.isMap()) {
             auto it = YmlMap::with(el);
-            cout << "MAP     :" << it.getKey() << endl;;
+            cout << "MAP     :" << it.getKey() << endl;
             greedyParseAll(it.getElementValues());
+
         } else if (el.isList()) {
             auto it = YmlList::with(el);
-            cout << "LIST    :" << it.getKey() << endl;;
+            cout << "LIST    :" << it.getKey() << endl;
             greedyParseAll(it.getElements());
+
         } else if (el.isScalar()) {
             auto it = YmlScalar::with(el);
             cout << "SCALAR  :" << it.getKey() << endl;
-            cout << "    TEXT:" << it.getValue() << endl;;
+            cout << "    TEXT:" << it.getValue() << endl;
+
         } else if (el.isRoot()) {
             auto it = YmlRoot::with(el);
             cout << "ROOT    :" << endl;
             greedyParseAll(it.getElements());
-        } else {
+
+        } else
             cout << "    TEXT:" << el.toString() << endl;
-        }
     }
 }
 

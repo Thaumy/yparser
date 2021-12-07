@@ -2,7 +2,7 @@
 // Created by Thaumy on 2021/9/7.
 //
 
-#include "YmlRoot.h"
+#include "../YmlRoot.h"
 
 #define Self yparser::YmlRoot
 

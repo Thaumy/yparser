@@ -53,3 +53,5 @@ cmake-build-debug
 build
 bin
 obj
+
+only_for_hk

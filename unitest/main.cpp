@@ -39,7 +39,6 @@ TEST(test6, timing) {
 
 
 int main() {
-    //test5::run();;;
     ::testing::InitGoogleTest();
     return RUN_ALL_TESTS();
 }
